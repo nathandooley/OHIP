@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="08f82e1e-b92c-4844-94cd-4e991519030b" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="SetAuthHeader" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="08f82e1e-b92c-4844-94cd-4e991519030bfileName">SetAuthHeader</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="groovy" name="Hotel API Auth - Groovy Script" id="0aab3a53-3e04-4f09-af30-34382f1a14fc"><con:settings/><con:config><script>import net.sf.json.groovy.*
+import com.eviware.soapui.impl.wsdl.teststeps.*
+import com.eviware.soapui.support.types.StringToStringsMap
+
+import com.eviware.soapui.impl.wsdl.support.http.HttpClientSupport
+import org.apache.http.impl.cookie.BasicClientCookie
+
+def adapterendpoint = testRunner.testCase.testSuite.project.getPropertyValue("adapterCallPath")
+
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context );
+def authTestStep = testRunner.runTestStepByName("GetAccessToken");
+def formAuthTestStep = testRunner.runTestStepByName("FormAuthGetCookie");
+def AuthSetup = testRunner.testCase.getTestStepByName("AuthSetup");
+
+def token = testRunner.testCase.testSteps["GetAccessToken"].testRequest.response.contentAsString
+def jsonSlurper = new JsonSlurper().parseText(token);
+auth_token = jsonSlurper.access_token;
+
+def project = testRunner.testCase.testSuite.project
+
+for( testSuite in project.getTestSuiteList() ) {
+	if (testSuite.name == "AuthSetup") {		
+		continue;
+	}
+	
+	for( testCase in testSuite.getTestCaseList() ) {
+
+		 if ( testSuite.name == "Properties")){
+		
+		for( testStep in testCase.getTestStepList() ) {
+
+			def headers = new StringToStringsMap()
+			
+			if( testStep instanceof RestTestRequestStep ) 
+
+			    					
+					testStep.setPropertyValue("endpoint",adapterendpoint)	
+					headers.put("Authorization", "Bearer " + auth_token);
+
+				testStep.getTestRequest().setRequestHeaders(headers)
+	    		
+	    		
+    		}
+
+	    		
+	}
+}
+}</script></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>

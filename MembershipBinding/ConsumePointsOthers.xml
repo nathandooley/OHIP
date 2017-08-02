@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="b1c506fc-5555-4232-ac01-42e362880f27" isOneWay="false" action="http://webservices.micros.com/ows/5.1/Membership.wsdl#ConsumePointsOthers" name="ConsumePointsOthers" bindingOperationName="ConsumePointsOthers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="f3af6bdf-db20-4dd1-b075-f404d6b093f2fileName">ConsumePointsOthers</con:setting><con:setting id="b1c506fc-5555-4232-ac01-42e362880f27fileName">ConsumePointsOthers</con:setting></con:settings><con:call id="85cc69ae-0fbb-4d01-8a48-8af8fb68e4d9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.76.240.141/OWS_WS_51/Membership.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:core="http://webservices.micros.com/og/4.3/Core/" xmlns:mem="http://webservices.micros.com/ows/5.1/Membership.wsdl">\r
+   <soapenv:Header>\r
+      <core:OGHeader transactionID="?" authToken="?" timeStamp="?" primaryLangID="E" channelValidation="true">\r
+         <core:Origin entityID="?" organizationID="?" systemType="?"/>\r
+         <core:Destination entityID="?" organizationID="?" systemType="?"/>\r
+         <!--Optional:-->\r
+         <core:Intermediaries>\r
+            <!--1 or more repetitions:-->\r
+            <core:EndPoint entityID="?" organizationID="?" systemType="?"/>\r
+         </core:Intermediaries>\r
+         <!--Optional:-->\r
+         <core:Authentication>\r
+            <core:UserCredentials>\r
+               <core:UserName>?</core:UserName>\r
+               <core:UserPassword>?</core:UserPassword>\r
+               <core:Domain>?</core:Domain>\r
+               <!--Optional:-->\r
+               <core:SecurityId>?</core:SecurityId>\r
+            </core:UserCredentials>\r
+            <!--Optional:-->\r
+            <core:Licence>\r
+               <!--Optional:-->\r
+               <core:Key>?</core:Key>\r
+            </core:Licence>\r
+         </core:Authentication>\r
+      </core:OGHeader>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <mem:ConsumePointsOthersRequest>\r
+         <mem:MembershipId>?</mem:MembershipId>\r
+         <mem:AwardType>?</mem:AwardType>\r
+         <mem:PointsRequired>?</mem:PointsRequired>\r
+         <mem:AwardSource>?</mem:AwardSource>\r
+         <mem:Product>?</mem:Product>\r
+      </mem:ConsumePointsOthersRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.micros.com/ows/5.1/Membership.wsdl#ConsumePointsOthers"/><con:environmentSpec><con:entry environmentId="4114fe2b-d68f-4255-81bc-b0973d0cd787"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="04767094-1085-4d37-8505-56dbf293eed1"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="e42d9aaa-93aa-414a-b420-033d8178335b"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="77de8b38-ee0a-4d95-8578-dd2fdf0463fe"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="f19783da-ac64-44fb-b84b-26126cb496ec"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="4f04f3ce-c51b-4d55-993f-ccf1408a187d"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:call><con:environmentSpec><con:entry environmentId="4114fe2b-d68f-4255-81bc-b0973d0cd787"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="f19783da-ac64-44fb-b84b-26126cb496ec"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:operation>

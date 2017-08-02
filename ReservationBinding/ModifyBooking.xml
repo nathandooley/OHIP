@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="fa8edd54-4176-4079-84cc-cc8ef9235c5b" isOneWay="false" action="http://webservices.micros.com/ows/5.1/Reservation.wsdl#ModifyBooking" name="ModifyBooking" bindingOperationName="ModifyBooking" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="84417404-87f6-4eac-b6fb-cfd5b85da897fileName">ModifyBooking</con:setting><con:setting id="fa8edd54-4176-4079-84cc-cc8ef9235c5bfileName">ModifyBooking</con:setting></con:settings><con:call id="2d9d5a33-3fe5-4212-8c9c-cd4970c6e452" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.76.240.141/OWS_WS_51/Reservation.asmx</con:endpoint><con:request><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Header>
+    <OGHeader transactionID="0230987" timeStamp="2009-03-13T15:25:01.4625000-05:00" xmlns="http://webservices.micros.com/og/4.3/Core/">
+      <Origin entityID="WEST" systemType="WEB" />
+      <Destination entityID="TI" systemType="ORS" />
+    </OGHeader>
+  </soap:Header>
+  <soap:Body>
+    <ModifyBookingRequest xmlns:r="http://webservices.micros.com/og/4.3/Reservation/" xmlns:hc="http://webservices.micros.com/og/4.3/HotelCommon/" xmlns:c="http://webservices.micros.com/og/4.3/Common/" xmlns="http://webservices.micros.com/ows/5.1/Reservation.wsdl" xmlns:n="http://webservices.micros.com/og/4.3/Name/">
+      <HotelReservation>
+        <r:UniqueIDList>
+          <c:UniqueID type="INTERNAL">5601385</c:UniqueID>
+        </r:UniqueIDList>
+        <r:RoomStays>
+          <hc:RoomStay>
+            <hc:RatePlans>
+              <hc:RatePlan ratePlanCode="ABC" />
+            </hc:RatePlans>
+            <hc:RoomTypes>
+              <hc:RoomType roomTypeCode="KNG" numberOfUnits="1" />
+            </hc:RoomTypes>
+            <hc:RoomRates>
+              <hc:RoomRate roomTypeCode="KNG" ratePlanCode="ABC" />
+            </hc:RoomRates>
+            <hc:GuestCounts>
+              <hc:GuestCount ageQualifyingCode="ADULT" count="1" />
+              <hc:GuestCount ageQualifyingCode="CHILD" count="0" />
+            </hc:GuestCounts>
+            <hc:TimeSpan>
+              <hc:StartDate>2017-01-12T00:00:00.0000000-05:00</hc:StartDate>
+              <hc:EndDate>2017-01-13T00:00:00.0000000-05:00</hc:EndDate>
+            </hc:TimeSpan>
+            <hc:Guarantee guaranteeType="GX">
+              <hc:GuaranteesAccepted>
+                <hc:GuaranteeAccepted>
+                  <hc:GuaranteeCreditCard>
+                    <c:cardCode>AX</c:cardCode>
+                    <c:cardHolderName>Cristina Boco</c:cardHolderName>
+                    <c:cardNumber>373344556677889</c:cardNumber>
+                    <c:expirationDate>2010-01-31</c:expirationDate>
+                  </hc:GuaranteeCreditCard>
+                </hc:GuaranteeAccepted>
+              </hc:GuaranteesAccepted>
+            </hc:Guarantee>
+            <hc:HotelReference chainCode="WC" hotelCode="SEFIVE" />
+            <hc:ResGuestRPHs>
+              <ResGuestRPH RPH="0" />
+            </hc:ResGuestRPHs>
+            <hc:Comments>
+              <hc:Comment guestViewable="false" commentOriginatorCode="CRO">
+                <hc:Text>Comment 1</hc:Text>
+              </hc:Comment>
+              <hc:Comment guestViewable="true">
+                <hc:Text>Comment 2</hc:Text>
+              </hc:Comment>
+            </hc:Comments>
+            <hc:SpecialRequests>
+              <hc:SpecialRequest requestCode="DIS" />
+              <hc:SpecialRequest requestCode="CHB" />
+            </hc:SpecialRequests>
+          </hc:RoomStay>
+        </r:RoomStays>
+        <r:ResGuests>
+          <r:ResGuest>
+            <r:Profiles>
+              <n:Profile>
+                <n:ProfileIDs>
+                  <c:UniqueID type="INTERNAL">5571609</c:UniqueID>
+                </n:ProfileIDs>
+              </n:Profile>
+            </r:Profiles>
+            <r:ArrivalTransport carrierCode="AA" id="421" locationCode="HEA" time="2004-01-29T14:30:00.000" />
+            <r:DepartureTransport carrierCode="DE" id="1421" locationCode="RSW" time="2005-05-31T16:30:00.000" type="Train" />
+          </r:ResGuest>
+        </r:ResGuests>
+        <WrittenConfInst>
+          <Email>KRAWAT@micros.com</Email>
+        </WrittenConfInst>
+      </HotelReservation>
+    </ModifyBookingRequest>
+  </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.micros.com/ows/5.1/Reservation.wsdl#ModifyBooking"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="4114fe2b-d68f-4255-81bc-b0973d0cd787"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="04767094-1085-4d37-8505-56dbf293eed1"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="e42d9aaa-93aa-414a-b420-033d8178335b"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="77de8b38-ee0a-4d95-8578-dd2fdf0463fe"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="f19783da-ac64-44fb-b84b-26126cb496ec"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="4f04f3ce-c51b-4d55-993f-ccf1408a187d"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:call><con:environmentSpec><con:entry environmentId="4114fe2b-d68f-4255-81bc-b0973d0cd787"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="f19783da-ac64-44fb-b84b-26126cb496ec"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:operation>

@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="7d2c9fb4-904a-40ab-95d6-60221579155e" isOneWay="false" action="http://webservices.micros.com/ows/5.1/MeetingRoom.wsdl#MeetingCreatePackageEvent" name="MeetingCreatePackageEvent" bindingOperationName="MeetingCreatePackageEvent" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="b7f63c9b-69e5-424f-8645-50860a7b46acfileName">MeetingCreatePackageEvent</con:setting><con:setting id="7d2c9fb4-904a-40ab-95d6-60221579155efileName">MeetingCreatePackageEvent</con:setting></con:settings><con:call id="d0e3638c-7864-4cf5-bea9-811de82bf662" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.76.240.141/OWS_WS_51/MeetingRoom.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:core="http://webservices.micros.com/og/4.3/Core/" xmlns:meet="http://webservices.micros.com/og/4.3/MeetingRoom/" xmlns:name="http://webservices.micros.com/og/4.3/Name/" xmlns:com="http://webservices.micros.com/og/4.3/Common/" xmlns:hot="http://webservices.micros.com/og/4.3/HotelCommon/">\r
+   <soapenv:Header>\r
+      <core:OGHeader transactionID="?" authToken="?" timeStamp="?" primaryLangID="E" channelValidation="true">\r
+         <core:Origin entityID="?" organizationID="?" systemType="?"/>\r
+         <core:Destination entityID="?" organizationID="?" systemType="?"/>\r
+         <!--Optional:-->\r
+         <core:Intermediaries>\r
+            <!--1 or more repetitions:-->\r
+            <core:EndPoint entityID="?" organizationID="?" systemType="?"/>\r
+         </core:Intermediaries>\r
+         <!--Optional:-->\r
+         <core:Authentication>\r
+            <core:UserCredentials>\r
+               <core:UserName>?</core:UserName>\r
+               <core:UserPassword>?</core:UserPassword>\r
+               <core:Domain>?</core:Domain>\r
+               <!--Optional:-->\r
+               <core:SecurityId>?</core:SecurityId>\r
+            </core:UserCredentials>\r
+            <!--Optional:-->\r
+            <core:Licence>\r
+               <!--Optional:-->\r
+               <core:Key>?</core:Key>\r
+            </core:Licence>\r
+         </core:Authentication>\r
+      </core:OGHeader>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <meet:MeetingCreatePackageEventRequest bookAsInquiry="?" onSiteContact="?">\r
+         <meet:PackageEvent numberOfAttendees="?">\r
+            <!--1 or more repetitions:-->\r
+            <meet:Profile nameType="?" protected="?" languageCode="?" nationality="?" vipCode="?" taxExempt="?" insertUser="?" insertDate="?" updateUser="?" updateDate="?" inactiveDate="?" active="?">\r
+               <!--Optional:-->\r
+               <name:ProfileIDs>\r
+                  <!--Zero or more repetitions:-->\r
+                  <com:UniqueID type="?" source="?">?</com:UniqueID>\r
+               </name:ProfileIDs>\r
+               <!--You have a CHOICE of the next 2 items at this level-->\r
+               <name:Customer gender="?" birthDate="?" profileType="?">\r
+                  <name:PersonName nameOrdered="?" familiarName="?" active="?">\r
+                     <!--Zero or more repetitions:-->\r
+                     <com:nameTitle>?</com:nameTitle>\r
+                     <!--Optional:-->\r
+                     <com:firstName>?</com:firstName>\r
+                     <!--Zero or more repetitions:-->\r
+                     <com:middleName>?</com:middleName>\r
+                     <com:lastName>?</com:lastName>\r
+                     <!--Zero or more repetitions:-->\r
+                     <com:nameSuffix>?</com:nameSuffix>\r
+                     <!--Optional:-->\r
+                     <com:accountName2>?</com:accountName2>\r
+                     <!--Optional:-->\r
+                     <com:accountName3>?</com:accountName3>\r
+                  </name:PersonName>\r
+                  <!--Optional:-->\r
+                  <name:NativeName nameOrdered="?" familiarName="?" active="?" languageCode="?">\r
+                     <!--Zero or more repetitions:-->\r
+                     <com:nameTitle>?</com:nameTitle>\r
+                     <!--Optional:-->\r
+                     <com:firstName>?</com:firstName>\r
+                     <!--Zero or more repetitions:-->\r
+                     <com:middleName>?</com:middleName>\r
+                     <com:lastName>?</com:lastName>\r
+                     <!--Zero or more repetitions:-->\r
+                     <com:nameSuffix>?</com:nameSuffix>\r
+                     <!--Optional:-->\r
+                     <com:accountName2>?</com:accountName2>\r
+                     <!--Optional:-->\r
+                     <com:accountName3>?</com:accountName3>\r
+                  </name:NativeName>\r
+                  <!--Optional:-->\r
+                  <name:BusinessTitle>?</name:BusinessTitle>\r
+                  <!--Optional:-->\r
+                  <name:GovernmentIDList>\r
+                     <!--Zero or more repetitions:-->\r
+                     <com:GovernmentID documentType="?" documentNumber="?" effectiveDate="?" expirationDate="?" placeOfIssue="?" countryOfIssue="?" documentID="?" resort="?" primary="?" displaySequence="?"/>\r
+                  </name:GovernmentIDList>\r
+               </name:Customer>\r
+               <name:Company commissionCode="?">\r
+                  <name:CompanyName>?</name:CompanyName>\r
+                  <name:CompanyType>?</name:CompanyType>\r
+                  <!--Optional:-->\r
+                  <name:CompanyID>?</name:CompanyID>\r
+               </name:Company>\r
+               <!--Optional:-->\r
+               <name:CreditCards>\r
+                  <!--Zero or more repetitions:-->\r
+                  <name:NameCreditCard cardType="?" otherCardType="?" chipAndPin="?" operaId="?" externalId="?" primary="?" displaySequence="?" insertUser="?" insertDate="?" updateUser="?" updateDate="?" inactiveDate="?">\r
+                     <!--Optional:-->\r
+                     <com:cardCode>?</com:cardCode>\r
+                     <!--Optional:-->\r
+                     <com:cardHolderName>?</com:cardHolderName>\r
+                     <!--You have a CHOICE of the next 2 items at this level-->\r
+                     <com:cardNumber>?</com:cardNumber>\r
+                     <com:VaultedCardData vaultedCardID="?" lastFourDigits="?"/>\r
+                     <!--Optional:-->\r
+                     <com:seriesCode>?</com:seriesCode>\r
+                     <!--Optional:-->\r
+                     <com:Track2>?</com:Track2>\r
+                     <!--Optional:-->\r
+                     <com:effectiveDate>?</com:effectiveDate>\r
+                     <com:expirationDate>?</com:expirationDate>\r
+                     <!--Optional:-->\r
+                     <com:EncryptedSwipe>\r
+                        <com:TrackIndicator>?</com:TrackIndicator>\r
+                        <com:SwiperType>?</com:SwiperType>\r
+                        <!--Optional:-->\r
+                        <com:SwiperID>?</com:SwiperID>\r
+                        <com:MaskedPAN>?</com:MaskedPAN>\r
+                        <!--Optional:-->\r
+                        <com:Track1>?</com:Track1>\r
+                        <!--Optional:-->\r
+                        <com:Track2>?</com:Track2>\r
+                        <com:KeySerialNumber>?</com:KeySerialNumber>\r
+                     </com:EncryptedSwipe>\r
+                  </name:NameCreditCard>\r
+               </name:CreditCards>\r
+               <!--Optional:-->\r
+               <name:Addresses>\r
+                  <!--Zero or more repetitions:-->\r
+                  <name:NameAddress addressType="?" otherAddressType="?" languageCode="?" operaId="?" externalId="?" primary="?" displaySequence="?" insertUser="?" insertDate="?" updateUser="?" updateDate="?" inactiveDate="?">\r
+                     <!--0 to 5 repetitions:-->\r
+                     <com:AddressLine>?</com:AddressLine>\r
+                     <!--Optional:-->\r
+                     <com:cityName>?</com:cityName>\r
+                     <!--Optional:-->\r
+                     <com:stateProv>?</com:stateProv>\r
+                     <!--Optional:-->\r
+                     <com:countryCode>?</com:countryCode>\r
+                     <!--Optional:-->\r
+                     <com:postalCode>?</com:postalCode>\r
+                     <!--Optional:-->\r
+                     <com:barCode>?</com:barCode>\r
+                     <!--Optional:-->\r
+                     <com:cityExtension>?</com:cityExtension>\r
+                  </name:NameAddress>\r
+               </name:Addresses>\r
+               <!--Optional:-->\r
+               <name:Blacklist flag="?">?</name:Blacklist>\r
+               <!--Optional:-->\r
+               <name:Phones>\r
+                  <!--Zero or more repetitions:-->\r
+                  <name:NamePhone phoneType="?" phoneRole="?" primaryPhone="?" operaId="?" externalId="?" primary="?" displaySequence="?" insertUser="?" insertDate="?" updateUser="?" updateDate="?" inactiveDate="?">\r
+                     <!--You have a CHOICE of the next 2 items at this level-->\r
+                     <com:PhoneNumber>?</com:PhoneNumber>\r
+                     <!--Optional:-->\r
+                     <com:PhoneData countryAccessCode="?" areaCode="?" phoneNumber="?" extension="?"/>\r
+                  </name:NamePhone>\r
+               </name:Phones>\r
+               <!--Optional:-->\r
+               <name:EMails>\r
+                  <!--Zero or more repetitions:-->\r
+                  <name:NameEmail operaId="?" externalId="?" primary="?" displaySequence="?" insertUser="?" insertDate="?" updateUser="?" updateDate="?" inactiveDate="?" emailType="?" emailFormat="?">?</name:NameEmail>\r
+               </name:EMails>\r
+               <!--Optional:-->\r
+               <name:Preferences>\r
+                  <!--Zero or more repetitions:-->\r
+                  <name:Preference resortCode="?" preferenceType="?" otherPreferenceType="?" preferenceValue="?" insertUser="?" insertDate="?" updateUser="?" updateDate="?" inactiveDate="?">\r
+                     <!--Optional:-->\r
+                     <name:PreferenceDescription>\r
+                        <!--You have a CHOICE of the next 3 items at this level-->\r
+                        <com:Text>\r
+                           <!--1 or more repetitions:-->\r
+                           <com:TextElement formatted="?" language="?">?</com:TextElement>\r
+                        </com:Text>\r
+                        <com:Image>?</com:Image>\r
+                        <com:Url>?</com:Url>\r
+                     </name:PreferenceDescription>\r
+                  </name:Preference>\r
+               </name:Preferences>\r
+               <!--Optional:-->\r
+               <name:Memberships>\r
+                  <!--Zero or more repetitions:-->\r
+                  <name:NameMembership operaId="?" externalId="?" primary="?" preferred="?" central_setup_yn="?" membership_class="?" points_label="?" status="?" displaySequence="?" insertUser="?" insertDate="?" updateUser="?" updateDate="?" inactiveDate="?" usedInReservation="?">\r
+                     <!--Optional:-->\r
+                     <com:membershipType>?</com:membershipType>\r
+                     <com:membershipNumber>?</com:membershipNumber>\r
+                     <!--Optional:-->\r
+                     <com:membershipLevel>?</com:membershipLevel>\r
+                     <!--Optional:-->\r
+                     <com:membershipNextLevel>?</com:membershipNextLevel>\r
+                     <!--Optional:-->\r
+                     <com:memberName>?</com:memberName>\r
+                     <!--Optional:-->\r
+                     <com:effectiveDate>?</com:effectiveDate>\r
+                     <!--Optional:-->\r
+                     <com:expirationDate>?</com:expirationDate>\r
+                     <!--Optional:-->\r
+                     <com:currentPoints>?</com:currentPoints>\r
+                     <!--Optional:-->\r
+                     <com:enrollmentCode>?</com:enrollmentCode>\r
+                     <!--Optional:-->\r
+                     <com:ResvNameId>\r
+                        <!--Zero or more repetitions:-->\r
+                        <com:UniqueID type="?" source="?">?</com:UniqueID>\r
+                     </com:ResvNameId>\r
+                     <!--Optional:-->\r
+                     <com:membershipid type="?" source="?">?</com:membershipid>\r
+                     <!--Optional:-->\r
+                     <com:transferPoints>?</com:transferPoints>\r
+                     <!--Optional:-->\r
+                     <com:enrollmentSource>?</com:enrollmentSource>\r
+                     <!--Optional:-->\r
+                     <com:enrolledAt>?</com:enrolledAt>\r
+                     <!--Optional:-->\r
+                     <com:awardPointsToExpires>\r
+                        <!--Zero or more repetitions:-->\r
+                        <com:AwardPointsToExpire expirationDate="?" totalToExpire="?" expireByDate="?"/>\r
+                     </com:awardPointsToExpires>\r
+                     <!--Optional:-->\r
+                     <com:inactive>?</com:inactive>\r
+                  </name:NameMembership>\r
+               </name:Memberships>\r
+               <!--Optional:-->\r
+               <name:NegotiatedRates>\r
+                  <!--Zero or more repetitions:-->\r
+                  <name:NegotiatedRate operaId="?" resortCode="?" rateCode="?" commissionCode="?" beginDate="?" endDate="?" displaySequence="?" insertUser="?" insertDate="?" updateUser="?" updateDate="?" inactiveDate="?"/>\r
+               </name:NegotiatedRates>\r
+               <!--Optional:-->\r
+               <name:Comments>\r
+                  <!--Zero or more repetitions:-->\r
+                  <name:Comment operaId="?" externalId="?" commentTitle="?" commentType="?" globalYn="?" internalYn="?" insertUser="?" insertDate="?" updateUser="?" updateDate="?" inactiveDate="?">\r
+                     <!--You have a CHOICE of the next 3 items at this level-->\r
+                     <com:Text>\r
+                        <!--1 or more repetitions:-->\r
+                        <com:TextElement formatted="?" language="?">?</com:TextElement>\r
+                     </com:Text>\r
+                     <com:Image>?</com:Image>\r
+                     <com:Url>?</com:Url>\r
+                  </name:Comment>\r
+               </name:Comments>\r
+               <!--Optional:-->\r
+               <name:UserDefinedValues>\r
+                  <!--Zero or more repetitions:-->\r
+                  <com:UserDefinedValue valueName="?">\r
+                     <!--You have a CHOICE of the next 3 items at this level-->\r
+                     <com:CharacterValue>?</com:CharacterValue>\r
+                     <com:DateValue>?</com:DateValue>\r
+                     <com:NumericValue>?</com:NumericValue>\r
+                  </com:UserDefinedValue>\r
+               </name:UserDefinedValues>\r
+               <!--Optional:-->\r
+               <name:Privacy>\r
+                  <!--1 or more repetitions:-->\r
+                  <name:PrivacyOption OptionType="?" OptionValue="?"/>\r
+               </name:Privacy>\r
+               <!--Optional:-->\r
+               <name:UserGroup groupType="?"/>\r
+               <!--Optional:-->\r
+               <name:StayHistory>\r
+                  <!--Optional:-->\r
+                  <name:LastStay>?</name:LastStay>\r
+                  <!--Optional:-->\r
+                  <name:TotalNumberOfStays>?</name:TotalNumberOfStays>\r
+                  <!--Optional:-->\r
+                  <name:LastRoomNumber>?</name:LastRoomNumber>\r
+                  <!--Optional:-->\r
+                  <name:LastRate currencyCode="?" decimals="?" currencyText="?">?</name:LastRate>\r
+               </name:StayHistory>\r
+               <!--Optional:-->\r
+               <name:Id documentType="?" documentNumber="?" effectiveDate="?" expirationDate="?" placeOfIssue="?" countryOfIssue="?" documentID="?" resort="?" primary="?" displaySequence="?"/>\r
+               <!--Optional:-->\r
+               <name:KeyWord>\r
+                  <!--Zero or more repetitions:-->\r
+                  <name:KeyWord>\r
+                     <!--Optional:-->\r
+                     <name:Type>?</name:Type>\r
+                     <!--Optional:-->\r
+                     <name:Value>?</name:Value>\r
+                  </name:KeyWord>\r
+               </name:KeyWord>\r
+               <!--Optional:-->\r
+               <name:Features>\r
+                  <!--Zero or more repetitions:-->\r
+                  <hot:Features Feature="?" Description="?" AttachPreferenceToProfile="?">\r
+                     <!--Optional:-->\r
+                     <hot:FeatureID>?</hot:FeatureID>\r
+                  </hot:Features>\r
+               </name:Features>\r
+            </meet:Profile>\r
+            <meet:MeetingDates>\r
+               <hot:StartDate>?</hot:StartDate>\r
+               <!--You have a CHOICE of the next 2 items at this level-->\r
+               <hot:EndDate>?</hot:EndDate>\r
+               <hot:Duration>?</hot:Duration>\r
+            </meet:MeetingDates>\r
+            <meet:HotelReference chainCode="?" hotelCode="?">?</meet:HotelReference>\r
+            <!--Zero or more repetitions:-->\r
+            <meet:PackageDetails>\r
+               <!--Optional:-->\r
+               <meet:Package template="?" packageCode="?" numberOfDays="?">\r
+                  <meet:PackageID type="?" source="?">?</meet:PackageID>\r
+                  <!--Optional:-->\r
+                  <meet:Description>\r
+                     <!--You have a CHOICE of the next 3 items at this level-->\r
+                     <hot:Text formatted="?" language="?">?</hot:Text>\r
+                     <hot:Image>?</hot:Image>\r
+                     <hot:URL>?</hot:URL>\r
+                  </meet:Description>\r
+                  <!--Zero or more repetitions:-->\r
+                  <meet:Events registrationRequired="?" openForRegistration="?" numberOfRegisteredAttendees="?" eventType="?" eventName="?" masterEvent="?" masterEventID="?">\r
+                     <!--Zero or more repetitions:-->\r
+                     <meet:MiscellaneousItems>\r
+                        <meet:ItemID type="?" source="?">?</meet:ItemID>\r
+                        <!--Optional:-->\r
+                        <meet:Description>\r
+                           <!--You have a CHOICE of the next 3 items at this level-->\r
+                           <hot:Text formatted="?" language="?">?</hot:Text>\r
+                           <hot:Image>?</hot:Image>\r
+                           <hot:URL>?</hot:URL>\r
+                        </meet:Description>\r
+                        <!--Optional:-->\r
+                        <meet:ItemClassID type="?" source="?">?</meet:ItemClassID>\r
+                        <!--Zero or more repetitions:-->\r
+                        <meet:RateCodes rateType="?" hourlyRate="?" participateInMinimumRevenue="?">\r
+                           <meet:RateCode>?</meet:RateCode>\r
+                           <!--Optional:-->\r
+                           <meet:RateDescription>\r
+                              <!--You have a CHOICE of the next 3 items at this level-->\r
+                              <hot:Text formatted="?" language="?">?</hot:Text>\r
+                              <hot:Image>?</hot:Image>\r
+                              <hot:URL>?</hot:URL>\r
+                           </meet:RateDescription>\r
+                           <!--Optional:-->\r
+                           <meet:Rate>\r
+                              <!--1 or more repetitions:-->\r
+                              <meet:RevenueTypes taxInclusive="?" revenueCode="?" revenueName="?" contributeToMinimumRevenuew="?">\r
+                                 <!--1 or more repetitions:-->\r
+                                 <meet:BaseRate>\r
+                                    <!--You may enter the following 2 items in any order-->\r
+                                    <hot:Description>?</hot:Description>\r
+                                    <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                                 </meet:BaseRate>\r
+                                 <!--Zero or more repetitions:-->\r
+                                 <meet:TaxesAndFees>\r
+                                    <!--You may enter the following 2 items in any order-->\r
+                                    <hot:Description>?</hot:Description>\r
+                                    <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                                 </meet:TaxesAndFees>\r
+                              </meet:RevenueTypes>\r
+                              <!--Optional:-->\r
+                              <meet:TotalRate currencyCode="?" decimals="?" currencyText="?">?</meet:TotalRate>\r
+                              <!--Optional:-->\r
+                              <meet:TotalTaxesAndFees currencyCode="?" decimals="?" currencyText="?">?</meet:TotalTaxesAndFees>\r
+                           </meet:Rate>\r
+                           <!--Optional:-->\r
+                           <meet:MinimumRevenue currencyCode="?" decimals="?" currencyText="?">?</meet:MinimumRevenue>\r
+                        </meet:RateCodes>\r
+                        <!--Optional:-->\r
+                        <meet:InternalBookedID type="?" source="?" actionType="?">?</meet:InternalBookedID>\r
+                     </meet:MiscellaneousItems>\r
+                     <!--Zero or more repetitions:-->\r
+                     <meet:Menus name="?" restriction="?" beverage="?" consumption="?" servingType="?" className="?">\r
+                        <meet:MenuID type="?" source="?">?</meet:MenuID>\r
+                        <!--Optional:-->\r
+                        <meet:Description>\r
+                           <!--You have a CHOICE of the next 3 items at this level-->\r
+                           <hot:Text formatted="?" language="?">?</hot:Text>\r
+                           <hot:Image>?</hot:Image>\r
+                           <hot:URL>?</hot:URL>\r
+                        </meet:Description>\r
+                        <!--Optional:-->\r
+                        <meet:Charges>\r
+                           <!--1 or more repetitions:-->\r
+                           <meet:RevenueTypes taxInclusive="?" revenueCode="?" revenueName="?" contributeToMinimumRevenuew="?">\r
+                              <!--1 or more repetitions:-->\r
+                              <meet:BaseRate>\r
+                                 <!--You may enter the following 2 items in any order-->\r
+                                 <hot:Description>?</hot:Description>\r
+                                 <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                              </meet:BaseRate>\r
+                              <!--Zero or more repetitions:-->\r
+                              <meet:TaxesAndFees>\r
+                                 <!--You may enter the following 2 items in any order-->\r
+                                 <hot:Description>?</hot:Description>\r
+                                 <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                              </meet:TaxesAndFees>\r
+                           </meet:RevenueTypes>\r
+                           <!--Optional:-->\r
+                           <meet:TotalRate currencyCode="?" decimals="?" currencyText="?">?</meet:TotalRate>\r
+                           <!--Optional:-->\r
+                           <meet:TotalTaxesAndFees currencyCode="?" decimals="?" currencyText="?">?</meet:TotalTaxesAndFees>\r
+                        </meet:Charges>\r
+                        <!--Zero or more repetitions:-->\r
+                        <meet:EventType>?</meet:EventType>\r
+                        <!--Optional:-->\r
+                        <meet:MenuDate>\r
+                           <hot:StartDate>?</hot:StartDate>\r
+                           <!--You have a CHOICE of the next 2 items at this level-->\r
+                           <hot:EndDate>?</hot:EndDate>\r
+                           <hot:Duration>?</hot:Duration>\r
+                        </meet:MenuDate>\r
+                        <!--Zero or more repetitions:-->\r
+                        <meet:MenuItems name1="?" name2="?" name3="?" restriction="?" beverage="?" priceIncluded="?">\r
+                           <meet:MenuItemID type="?" source="?">?</meet:MenuItemID>\r
+                           <!--Optional:-->\r
+                           <meet:Description>\r
+                              <!--You have a CHOICE of the next 3 items at this level-->\r
+                              <hot:Text formatted="?" language="?">?</hot:Text>\r
+                              <hot:Image>?</hot:Image>\r
+                              <hot:URL>?</hot:URL>\r
+                           </meet:Description>\r
+                           <!--Optional:-->\r
+                           <meet:Charges>\r
+                              <!--1 or more repetitions:-->\r
+                              <meet:RevenueTypes taxInclusive="?" revenueCode="?" revenueName="?" contributeToMinimumRevenuew="?">\r
+                                 <!--1 or more repetitions:-->\r
+                                 <meet:BaseRate>\r
+                                    <!--You may enter the following 2 items in any order-->\r
+                                    <hot:Description>?</hot:Description>\r
+                                    <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                                 </meet:BaseRate>\r
+                                 <!--Zero or more repetitions:-->\r
+                                 <meet:TaxesAndFees>\r
+                                    <!--You may enter the following 2 items in any order-->\r
+                                    <hot:Description>?</hot:Description>\r
+                                    <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                                 </meet:TaxesAndFees>\r
+                              </meet:RevenueTypes>\r
+                              <!--Optional:-->\r
+                              <meet:TotalRate currencyCode="?" decimals="?" currencyText="?">?</meet:TotalRate>\r
+                              <!--Optional:-->\r
+                              <meet:TotalTaxesAndFees currencyCode="?" decimals="?" currencyText="?">?</meet:TotalTaxesAndFees>\r
+                           </meet:Charges>\r
+                           <!--Zero or more repetitions:-->\r
+                           <meet:EventType>?</meet:EventType>\r
+                           <!--Optional:-->\r
+                           <meet:InternalBookedID type="?" source="?" actionType="?">?</meet:InternalBookedID>\r
+                        </meet:MenuItems>\r
+                        <!--Optional:-->\r
+                        <meet:InternalBookedID type="?" source="?" actionType="?">?</meet:InternalBookedID>\r
+                     </meet:Menus>\r
+                     <meet:FunctionSpace locationType="?" locationDescription="?" spaceType="?" spaceDescription="?" floor="?" floorDescription="?" shortDescription="?" handicapFacility="?">\r
+                        <meet:Room>?</meet:Room>\r
+                        <!--Optional:-->\r
+                        <meet:RoomDescription>\r
+                           <!--You have a CHOICE of the next 3 items at this level-->\r
+                           <hot:Text formatted="?" language="?">?</hot:Text>\r
+                           <hot:Image>?</hot:Image>\r
+                           <hot:URL>?</hot:URL>\r
+                        </meet:RoomDescription>\r
+                        <!--Optional:-->\r
+                        <meet:RateRange minimumRate="?" maximumRate="?" currencyCode="?" decimals="?" commissionCode="?"/>\r
+                        <!--Zero or more repetitions:-->\r
+                        <meet:RateDetails rateType="?" hourlyRate="?" participateInMinimumRevenue="?">\r
+                           <meet:RateCode>?</meet:RateCode>\r
+                           <!--Optional:-->\r
+                           <meet:RateDescription>\r
+                              <!--You have a CHOICE of the next 3 items at this level-->\r
+                              <hot:Text formatted="?" language="?">?</hot:Text>\r
+                              <hot:Image>?</hot:Image>\r
+                              <hot:URL>?</hot:URL>\r
+                           </meet:RateDescription>\r
+                           <!--Optional:-->\r
+                           <meet:Rate>\r
+                              <!--1 or more repetitions:-->\r
+                              <meet:RevenueTypes taxInclusive="?" revenueCode="?" revenueName="?" contributeToMinimumRevenuew="?">\r
+                                 <!--1 or more repetitions:-->\r
+                                 <meet:BaseRate>\r
+                                    <!--You may enter the following 2 items in any order-->\r
+                                    <hot:Description>?</hot:Description>\r
+                                    <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                                 </meet:BaseRate>\r
+                                 <!--Zero or more repetitions:-->\r
+                                 <meet:TaxesAndFees>\r
+                                    <!--You may enter the following 2 items in any order-->\r
+                                    <hot:Description>?</hot:Description>\r
+                                    <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                                 </meet:TaxesAndFees>\r
+                              </meet:RevenueTypes>\r
+                              <!--Optional:-->\r
+                              <meet:TotalRate currencyCode="?" decimals="?" currencyText="?">?</meet:TotalRate>\r
+                              <!--Optional:-->\r
+                              <meet:TotalTaxesAndFees currencyCode="?" decimals="?" currencyText="?">?</meet:TotalTaxesAndFees>\r
+                           </meet:Rate>\r
+                           <!--Optional:-->\r
+                           <meet:MinimumRevenue currencyCode="?" decimals="?" currencyText="?">?</meet:MinimumRevenue>\r
+                        </meet:RateDetails>\r
+                        <!--Zero or more repetitions:-->\r
+                        <meet:SetupStyles minimumOccupancy="?" maximumOccupancy="?" setUpMinutes="?" setDownMinutes="?">\r
+                           <meet:SetupStyleCode>?</meet:SetupStyleCode>\r
+                           <!--Optional:-->\r
+                           <meet:SetupStyleDescription>\r
+                              <!--You have a CHOICE of the next 3 items at this level-->\r
+                              <hot:Text formatted="?" language="?">?</hot:Text>\r
+                              <hot:Image>?</hot:Image>\r
+                              <hot:URL>?</hot:URL>\r
+                           </meet:SetupStyleDescription>\r
+                           <!--Optional:-->\r
+                           <meet:InternalBookedID type="?" source="?" actionType="?">?</meet:InternalBookedID>\r
+                        </meet:SetupStyles>\r
+                        <!--Optional:-->\r
+                        <meet:WebBookable isWebBookable="?" marketingText="?"/>\r
+                     </meet:FunctionSpace>\r
+                     <!--Optional:-->\r
+                     <meet:EventID type="?" source="?" actionType="?">?</meet:EventID>\r
+                     <!--Optional:-->\r
+                     <meet:EventDate>\r
+                        <hot:StartDate>?</hot:StartDate>\r
+                        <!--You have a CHOICE of the next 2 items at this level-->\r
+                        <hot:EndDate>?</hot:EndDate>\r
+                        <hot:Duration>?</hot:Duration>\r
+                     </meet:EventDate>\r
+                     <!--Zero or more repetitions:-->\r
+                     <meet:Delegates>\r
+                        <meet:ProfileID type="?" source="?">?</meet:ProfileID>\r
+                        <meet:LastName>?</meet:LastName>\r
+                        <!--Optional:-->\r
+                        <meet:FirstName>?</meet:FirstName>\r
+                        <!--Optional:-->\r
+                        <meet:EmailAddress>?</meet:EmailAddress>\r
+                        <!--Optional:-->\r
+                        <meet:VipCode>?</meet:VipCode>\r
+                     </meet:Delegates>\r
+                  </meet:Events>\r
+                  <!--Zero or more repetitions:-->\r
+                  <meet:PackageRateCodes rateType="?" hourlyRate="?">\r
+                     <meet:RateCode>?</meet:RateCode>\r
+                     <!--Optional:-->\r
+                     <meet:RateDescription>\r
+                        <!--You have a CHOICE of the next 3 items at this level-->\r
+                        <hot:Text formatted="?" language="?">?</hot:Text>\r
+                        <hot:Image>?</hot:Image>\r
+                        <hot:URL>?</hot:URL>\r
+                     </meet:RateDescription>\r
+                     <!--Zero or more repetitions:-->\r
+                     <meet:PackageEventRates>\r
+                        <!--Optional:-->\r
+                        <meet:EventID type="?" source="?">?</meet:EventID>\r
+                        <!--Optional:-->\r
+                        <meet:Rate>\r
+                           <!--1 or more repetitions:-->\r
+                           <meet:RevenueTypes taxInclusive="?" revenueCode="?" revenueName="?" contributeToMinimumRevenuew="?">\r
+                              <!--1 or more repetitions:-->\r
+                              <meet:BaseRate>\r
+                                 <!--You may enter the following 2 items in any order-->\r
+                                 <hot:Description>?</hot:Description>\r
+                                 <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                              </meet:BaseRate>\r
+                              <!--Zero or more repetitions:-->\r
+                              <meet:TaxesAndFees>\r
+                                 <!--You may enter the following 2 items in any order-->\r
+                                 <hot:Description>?</hot:Description>\r
+                                 <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                              </meet:TaxesAndFees>\r
+                           </meet:RevenueTypes>\r
+                           <!--Optional:-->\r
+                           <meet:TotalRate currencyCode="?" decimals="?" currencyText="?">?</meet:TotalRate>\r
+                           <!--Optional:-->\r
+                           <meet:TotalTaxesAndFees currencyCode="?" decimals="?" currencyText="?">?</meet:TotalTaxesAndFees>\r
+                        </meet:Rate>\r
+                     </meet:PackageEventRates>\r
+                  </meet:PackageRateCodes>\r
+                  <!--Optional:-->\r
+                  <meet:InternalBookedID type="?" source="?" actionType="?">?</meet:InternalBookedID>\r
+               </meet:Package>\r
+               <!--Optional:-->\r
+               <meet:PackageAddon>\r
+                  <!--Zero or more repetitions:-->\r
+                  <meet:MiscellaneousItems quantity="?" eventID="?" bookedEventID="?">\r
+                     <meet:ItemID type="?" source="?">?</meet:ItemID>\r
+                     <!--Optional:-->\r
+                     <meet:Description>\r
+                        <!--You have a CHOICE of the next 3 items at this level-->\r
+                        <hot:Text formatted="?" language="?">?</hot:Text>\r
+                        <hot:Image>?</hot:Image>\r
+                        <hot:URL>?</hot:URL>\r
+                     </meet:Description>\r
+                     <!--Optional:-->\r
+                     <meet:ItemClassID type="?" source="?">?</meet:ItemClassID>\r
+                     <!--Zero or more repetitions:-->\r
+                     <meet:RateCodes rateType="?" hourlyRate="?" participateInMinimumRevenue="?">\r
+                        <meet:RateCode>?</meet:RateCode>\r
+                        <!--Optional:-->\r
+                        <meet:RateDescription>\r
+                           <!--You have a CHOICE of the next 3 items at this level-->\r
+                           <hot:Text formatted="?" language="?">?</hot:Text>\r
+                           <hot:Image>?</hot:Image>\r
+                           <hot:URL>?</hot:URL>\r
+                        </meet:RateDescription>\r
+                        <!--Optional:-->\r
+                        <meet:Rate>\r
+                           <!--1 or more repetitions:-->\r
+                           <meet:RevenueTypes taxInclusive="?" revenueCode="?" revenueName="?" contributeToMinimumRevenuew="?">\r
+                              <!--1 or more repetitions:-->\r
+                              <meet:BaseRate>\r
+                                 <!--You may enter the following 2 items in any order-->\r
+                                 <hot:Description>?</hot:Description>\r
+                                 <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                              </meet:BaseRate>\r
+                              <!--Zero or more repetitions:-->\r
+                              <meet:TaxesAndFees>\r
+                                 <!--You may enter the following 2 items in any order-->\r
+                                 <hot:Description>?</hot:Description>\r
+                                 <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                              </meet:TaxesAndFees>\r
+                           </meet:RevenueTypes>\r
+                           <!--Optional:-->\r
+                           <meet:TotalRate currencyCode="?" decimals="?" currencyText="?">?</meet:TotalRate>\r
+                           <!--Optional:-->\r
+                           <meet:TotalTaxesAndFees currencyCode="?" decimals="?" currencyText="?">?</meet:TotalTaxesAndFees>\r
+                        </meet:Rate>\r
+                        <!--Optional:-->\r
+                        <meet:MinimumRevenue currencyCode="?" decimals="?" currencyText="?">?</meet:MinimumRevenue>\r
+                     </meet:RateCodes>\r
+                     <!--Optional:-->\r
+                     <meet:InternalBookedID type="?" source="?" actionType="?">?</meet:InternalBookedID>\r
+                  </meet:MiscellaneousItems>\r
+                  <!--Zero or more repetitions:-->\r
+                  <meet:Menus name="?" restriction="?" beverage="?" consumption="?" servingType="?" className="?" quantity="?" eventID="?" bookedEventID="?">\r
+                     <meet:MenuID type="?" source="?">?</meet:MenuID>\r
+                     <!--Optional:-->\r
+                     <meet:Description>\r
+                        <!--You have a CHOICE of the next 3 items at this level-->\r
+                        <hot:Text formatted="?" language="?">?</hot:Text>\r
+                        <hot:Image>?</hot:Image>\r
+                        <hot:URL>?</hot:URL>\r
+                     </meet:Description>\r
+                     <!--Optional:-->\r
+                     <meet:Charges>\r
+                        <!--1 or more repetitions:-->\r
+                        <meet:RevenueTypes taxInclusive="?" revenueCode="?" revenueName="?" contributeToMinimumRevenuew="?">\r
+                           <!--1 or more repetitions:-->\r
+                           <meet:BaseRate>\r
+                              <!--You may enter the following 2 items in any order-->\r
+                              <hot:Description>?</hot:Description>\r
+                              <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                           </meet:BaseRate>\r
+                           <!--Zero or more repetitions:-->\r
+                           <meet:TaxesAndFees>\r
+                              <!--You may enter the following 2 items in any order-->\r
+                              <hot:Description>?</hot:Description>\r
+                              <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                           </meet:TaxesAndFees>\r
+                        </meet:RevenueTypes>\r
+                        <!--Optional:-->\r
+                        <meet:TotalRate currencyCode="?" decimals="?" currencyText="?">?</meet:TotalRate>\r
+                        <!--Optional:-->\r
+                        <meet:TotalTaxesAndFees currencyCode="?" decimals="?" currencyText="?">?</meet:TotalTaxesAndFees>\r
+                     </meet:Charges>\r
+                     <!--Zero or more repetitions:-->\r
+                     <meet:EventType>?</meet:EventType>\r
+                     <!--Optional:-->\r
+                     <meet:MenuDate>\r
+                        <hot:StartDate>?</hot:StartDate>\r
+                        <!--You have a CHOICE of the next 2 items at this level-->\r
+                        <hot:EndDate>?</hot:EndDate>\r
+                        <hot:Duration>?</hot:Duration>\r
+                     </meet:MenuDate>\r
+                     <!--Zero or more repetitions:-->\r
+                     <meet:MenuItems name1="?" name2="?" name3="?" restriction="?" beverage="?" priceIncluded="?">\r
+                        <meet:MenuItemID type="?" source="?">?</meet:MenuItemID>\r
+                        <!--Optional:-->\r
+                        <meet:Description>\r
+                           <!--You have a CHOICE of the next 3 items at this level-->\r
+                           <hot:Text formatted="?" language="?">?</hot:Text>\r
+                           <hot:Image>?</hot:Image>\r
+                           <hot:URL>?</hot:URL>\r
+                        </meet:Description>\r
+                        <!--Optional:-->\r
+                        <meet:Charges>\r
+                           <!--1 or more repetitions:-->\r
+                           <meet:RevenueTypes taxInclusive="?" revenueCode="?" revenueName="?" contributeToMinimumRevenuew="?">\r
+                              <!--1 or more repetitions:-->\r
+                              <meet:BaseRate>\r
+                                 <!--You may enter the following 2 items in any order-->\r
+                                 <hot:Description>?</hot:Description>\r
+                                 <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                              </meet:BaseRate>\r
+                              <!--Zero or more repetitions:-->\r
+                              <meet:TaxesAndFees>\r
+                                 <!--You may enter the following 2 items in any order-->\r
+                                 <hot:Description>?</hot:Description>\r
+                                 <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                              </meet:TaxesAndFees>\r
+                           </meet:RevenueTypes>\r
+                           <!--Optional:-->\r
+                           <meet:TotalRate currencyCode="?" decimals="?" currencyText="?">?</meet:TotalRate>\r
+                           <!--Optional:-->\r
+                           <meet:TotalTaxesAndFees currencyCode="?" decimals="?" currencyText="?">?</meet:TotalTaxesAndFees>\r
+                        </meet:Charges>\r
+                        <!--Zero or more repetitions:-->\r
+                        <meet:EventType>?</meet:EventType>\r
+                        <!--Optional:-->\r
+                        <meet:InternalBookedID type="?" source="?" actionType="?">?</meet:InternalBookedID>\r
+                     </meet:MenuItems>\r
+                     <!--Optional:-->\r
+                     <meet:InternalBookedID type="?" source="?" actionType="?">?</meet:InternalBookedID>\r
+                  </meet:Menus>\r
+                  <!--Zero or more repetitions:-->\r
+                  <meet:MenuItems name1="?" name2="?" name3="?" restriction="?" beverage="?" priceIncluded="?" menuID="?" eventID="?" quantity="?" bookedEventID="?" bookedMenuID="?">\r
+                     <meet:MenuItemID type="?" source="?">?</meet:MenuItemID>\r
+                     <!--Optional:-->\r
+                     <meet:Description>\r
+                        <!--You have a CHOICE of the next 3 items at this level-->\r
+                        <hot:Text formatted="?" language="?">?</hot:Text>\r
+                        <hot:Image>?</hot:Image>\r
+                        <hot:URL>?</hot:URL>\r
+                     </meet:Description>\r
+                     <!--Optional:-->\r
+                     <meet:Charges>\r
+                        <!--1 or more repetitions:-->\r
+                        <meet:RevenueTypes taxInclusive="?" revenueCode="?" revenueName="?" contributeToMinimumRevenuew="?">\r
+                           <!--1 or more repetitions:-->\r
+                           <meet:BaseRate>\r
+                              <!--You may enter the following 2 items in any order-->\r
+                              <hot:Description>?</hot:Description>\r
+                              <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                           </meet:BaseRate>\r
+                           <!--Zero or more repetitions:-->\r
+                           <meet:TaxesAndFees>\r
+                              <!--You may enter the following 2 items in any order-->\r
+                              <hot:Description>?</hot:Description>\r
+                              <hot:Amount currencyCode="?" decimals="?" currencyText="?">?</hot:Amount>\r
+                           </meet:TaxesAndFees>\r
+                        </meet:RevenueTypes>\r
+                        <!--Optional:-->\r
+                        <meet:TotalRate currencyCode="?" decimals="?" currencyText="?">?</meet:TotalRate>\r
+                        <!--Optional:-->\r
+                        <meet:TotalTaxesAndFees currencyCode="?" decimals="?" currencyText="?">?</meet:TotalTaxesAndFees>\r
+                     </meet:Charges>\r
+                     <!--Zero or more repetitions:-->\r
+                     <meet:EventType>?</meet:EventType>\r
+                     <!--Optional:-->\r
+                     <meet:InternalBookedID type="?" source="?" actionType="?">?</meet:InternalBookedID>\r
+                  </meet:MenuItems>\r
+               </meet:PackageAddon>\r
+               <!--Optional:-->\r
+               <meet:StartDate>?</meet:StartDate>\r
+            </meet:PackageDetails>\r
+            <!--Zero or more repetitions:-->\r
+            <meet:SleepingRooms roomType="?" quantity="?" actionType="?">\r
+               <!--Optional:-->\r
+               <meet:RoomDates>\r
+                  <hot:StartDate>?</hot:StartDate>\r
+                  <!--You have a CHOICE of the next 2 items at this level-->\r
+                  <hot:EndDate>?</hot:EndDate>\r
+                  <hot:Duration>?</hot:Duration>\r
+               </meet:RoomDates>\r
+            </meet:SleepingRooms>\r
+            <!--Optional:-->\r
+            <meet:BlockData blockName="?" blockCode="?">\r
+               <!--Zero or more repetitions:-->\r
+               <meet:BlockNotes noteTitle="?" internalNote="?">\r
+                  <hot:NoteText>\r
+                     <!--You have a CHOICE of the next 3 items at this level-->\r
+                     <com:Text>\r
+                        <!--1 or more repetitions:-->\r
+                        <com:TextElement formatted="?" language="?">?</com:TextElement>\r
+                     </com:Text>\r
+                     <com:Image>?</com:Image>\r
+                     <com:Url>?</com:Url>\r
+                  </hot:NoteText>\r
+                  <!--Optional:-->\r
+                  <hot:NoteID type="?" source="?" actionType="?">?</hot:NoteID>\r
+               </meet:BlockNotes>\r
+            </meet:BlockData>\r
+            <!--Optional:-->\r
+            <meet:BlockID type="?" source="?">?</meet:BlockID>\r
+         </meet:PackageEvent>\r
+         <!--Optional:-->\r
+         <meet:CreditCard cardType="?" otherCardType="?" chipAndPin="?">\r
+            <!--Optional:-->\r
+            <com:cardCode>?</com:cardCode>\r
+            <!--Optional:-->\r
+            <com:cardHolderName>?</com:cardHolderName>\r
+            <!--You have a CHOICE of the next 2 items at this level-->\r
+            <com:cardNumber>?</com:cardNumber>\r
+            <com:VaultedCardData vaultedCardID="?" lastFourDigits="?"/>\r
+            <!--Optional:-->\r
+            <com:seriesCode>?</com:seriesCode>\r
+            <!--Optional:-->\r
+            <com:Track2>?</com:Track2>\r
+            <!--Optional:-->\r
+            <com:effectiveDate>?</com:effectiveDate>\r
+            <com:expirationDate>?</com:expirationDate>\r
+            <!--Optional:-->\r
+            <com:EncryptedSwipe>\r
+               <com:TrackIndicator>?</com:TrackIndicator>\r
+               <com:SwiperType>?</com:SwiperType>\r
+               <!--Optional:-->\r
+               <com:SwiperID>?</com:SwiperID>\r
+               <com:MaskedPAN>?</com:MaskedPAN>\r
+               <!--Optional:-->\r
+               <com:Track1>?</com:Track1>\r
+               <!--Optional:-->\r
+               <com:Track2>?</com:Track2>\r
+               <com:KeySerialNumber>?</com:KeySerialNumber>\r
+            </com:EncryptedSwipe>\r
+            <!--Optional:-->\r
+            <hot:CIDNumber>?</hot:CIDNumber>\r
+            <!--Optional:-->\r
+            <hot:Address addressType="?" otherAddressType="?" languageCode="?">\r
+               <!--0 to 5 repetitions:-->\r
+               <com:AddressLine>?</com:AddressLine>\r
+               <!--Optional:-->\r
+               <com:cityName>?</com:cityName>\r
+               <!--Optional:-->\r
+               <com:stateProv>?</com:stateProv>\r
+               <!--Optional:-->\r
+               <com:countryCode>?</com:countryCode>\r
+               <!--Optional:-->\r
+               <com:postalCode>?</com:postalCode>\r
+               <!--Optional:-->\r
+               <com:barCode>?</com:barCode>\r
+               <!--Optional:-->\r
+               <com:cityExtension>?</com:cityExtension>\r
+            </hot:Address>\r
+            <!--Optional:-->\r
+            <hot:IssueNumber>?</hot:IssueNumber>\r
+            <!--Optional:-->\r
+            <hot:ApprovalCode>?</hot:ApprovalCode>\r
+            <!--Optional:-->\r
+            <hot:DepositAmount currencyCode="?" decimals="?" currencyText="?">?</hot:DepositAmount>\r
+         </meet:CreditCard>\r
+      </meet:MeetingCreatePackageEventRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.micros.com/ows/5.1/MeetingRoom.wsdl#MeetingCreatePackageEvent"/><con:environmentSpec><con:entry environmentId="4114fe2b-d68f-4255-81bc-b0973d0cd787"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="04767094-1085-4d37-8505-56dbf293eed1"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="e42d9aaa-93aa-414a-b420-033d8178335b"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="77de8b38-ee0a-4d95-8578-dd2fdf0463fe"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="f19783da-ac64-44fb-b84b-26126cb496ec"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="4f04f3ce-c51b-4d55-993f-ccf1408a187d"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:call><con:environmentSpec><con:entry environmentId="4114fe2b-d68f-4255-81bc-b0973d0cd787"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="f19783da-ac64-44fb-b84b-26126cb496ec"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:operation>

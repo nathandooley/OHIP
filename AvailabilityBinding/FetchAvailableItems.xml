@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="54bc5d81-d5b4-4fdb-9aaa-b55ca46039b5" isOneWay="false" action="http://webservices.micros.com/ows/5.1/Availability.wsdl#FetchAvailableItems" name="FetchAvailableItems" bindingOperationName="FetchAvailableItems" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="36a5bb47-1860-461a-b06b-8b9859037a06fileName">FetchAvailableItems</con:setting><con:setting id="54bc5d81-d5b4-4fdb-9aaa-b55ca46039b5fileName">FetchAvailableItems</con:setting></con:settings><con:call id="308f9d57-b1df-4e0e-aebe-ee44bf18d87b" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.76.240.141/OWS_WS_51/Availability.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:core="http://webservices.micros.com/og/4.3/Core/" xmlns:ava="http://webservices.micros.com/ows/5.1/Availability.wsdl" xmlns:hot="http://webservices.micros.com/og/4.3/HotelCommon/" xmlns:com="http://webservices.micros.com/og/4.3/Common/">
+   <soapenv:Header>
+      <core:OGHeader transactionID="?" authToken="?" timeStamp="?" primaryLangID="E" channelValidation="true">
+         <core:Origin entityID="?" organizationID="?" systemType="?"/>
+         <core:Destination entityID="?" organizationID="?" systemType="?"/>
+         <!--Optional:-->
+         <core:Intermediaries>
+            <!--1 or more repetitions:-->
+            <core:EndPoint entityID="?" organizationID="?" systemType="?"/>
+         </core:Intermediaries>
+         <!--Optional:-->
+         <core:Authentication>
+            <core:UserCredentials>
+               <core:UserName>?</core:UserName>
+               <core:UserPassword>?</core:UserPassword>
+               <core:Domain>?</core:Domain>
+               <!--Optional:-->
+               <core:SecurityId>?</core:SecurityId>
+            </core:UserCredentials>
+            <!--Optional:-->
+            <core:Licence>
+               <!--Optional:-->
+               <core:Key>?</core:Key>
+            </core:Licence>
+         </core:Authentication>
+      </core:OGHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ava:FetchAvailableItemsRequest>
+         <ava:HotelReference chainCode="?" hotelCode="?">?</ava:HotelReference>
+         <ava:StayDateRange>
+            <hot:StartDate>?</hot:StartDate>
+            <!--You have a CHOICE of the next 2 items at this level-->
+            <hot:EndDate>?</hot:EndDate>
+            <hot:Duration>?</hot:Duration>
+         </ava:StayDateRange>
+         <ava:InventoryItem isPackage="?" isChild="?" ItemDate="?">
+            <hot:ItemCode>?</hot:ItemCode>
+            <hot:ItemName>?</hot:ItemName>
+            <!--1 or more repetitions:-->
+            <hot:Description>
+               <!--You have a CHOICE of the next 3 items at this level-->
+               <com:Text>
+                  <!--1 or more repetitions:-->
+                  <com:TextElement formatted="?" language="?">?</com:TextElement>
+               </com:Text>
+               <com:Image>?</com:Image>
+               <com:Url>?</com:Url>
+            </hot:Description>
+            <hot:SellControl>?</hot:SellControl>
+            <hot:SellSeparate>?</hot:SellSeparate>
+            <!--Optional:-->
+            <hot:Quantity>?</hot:Quantity>
+            <!--Optional:-->
+            <hot:Available>?</hot:Available>
+            <hot:ItemGroup>
+               <hot:Code>?</hot:Code>
+               <!--1 or more repetitions:-->
+               <hot:Description>
+                  <!--You have a CHOICE of the next 3 items at this level-->
+                  <com:Text>
+                     <!--1 or more repetitions:-->
+                     <com:TextElement formatted="?" language="?">?</com:TextElement>
+                  </com:Text>
+                  <com:Image>?</com:Image>
+                  <com:Url>?</com:Url>
+               </hot:Description>
+            </hot:ItemGroup>
+         </ava:InventoryItem>
+      </ava:FetchAvailableItemsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.micros.com/ows/5.1/Availability.wsdl#FetchAvailableItems"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="4114fe2b-d68f-4255-81bc-b0973d0cd787"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="04767094-1085-4d37-8505-56dbf293eed1"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="e42d9aaa-93aa-414a-b420-033d8178335b"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="77de8b38-ee0a-4d95-8578-dd2fdf0463fe"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="f19783da-ac64-44fb-b84b-26126cb496ec"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="4f04f3ce-c51b-4d55-993f-ccf1408a187d"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:call><con:environmentSpec><con:entry environmentId="4114fe2b-d68f-4255-81bc-b0973d0cd787"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="f19783da-ac64-44fb-b84b-26126cb496ec"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:operation>

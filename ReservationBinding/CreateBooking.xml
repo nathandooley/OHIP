@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="c1dc1c4e-05d9-470b-81f7-ffc819a3a868" isOneWay="false" action="http://webservices.micros.com/ows/5.1/Reservation.wsdl#CreateBooking" name="CreateBooking" bindingOperationName="CreateBooking" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="e7d7293d-378c-4d93-a4b4-fcdf4b1f0652fileName">CreateBooking</con:setting><con:setting id="c1dc1c4e-05d9-470b-81f7-ffc819a3a868fileName">CreateBooking</con:setting></con:settings><con:call id="2e8f9a3f-b50c-47af-9987-07de2b94baa0" name="Create_Res_SEPARA"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.76.240.141/OWS_WS_51/Reservation.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://webservices.micros.com/og/4.3/Common/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:r="http://webservices.micros.com/og/4.3/Reservation/" xmlns:hc="http://webservices.micros.com/og/4.3/HotelCommon/" xmlns:n="http://webservices.micros.com/og/4.3/Name/">
+   <soap:Header>
+      <OGHeader soap:mustUnderstand="1" transactionID="0000101" timeStamp="2004-03-22T15:25:01.4625000-05:00" primaryLangID="E" xmlns="http://webservices.micros.com/og/4.3/Core/">
+         <Origin entityID="WEST" systemType="WEB"/>
+         <Destination entityID="TI" systemType="ORS"/>
+      </OGHeader>
+   </soap:Header>
+   <soap:Body>
+      <CreateBookingRequest xmlns="http://webservices.micros.com/ows/5.1/Reservation.wsdl">
+         <HotelReservation>
+            <r:RoomStays>
+               <hc:RoomStay>
+                  <hc:RatePlans>
+                     <hc:RatePlan ratePlanCode="AAT"/>
+                  </hc:RatePlans>
+                  <hc:RoomTypes>
+                     <hc:RoomType roomTypeCode="A1K" numberOfUnits="1"/>
+                  </hc:RoomTypes>
+                  <hc:RoomRates>
+                     <hc:RoomRate roomTypeCode="A1K" ratePlanCode="AAT"/>
+                  </hc:RoomRates>
+                  <hc:GuestCounts>
+                     <hc:GuestCount ageQualifyingCode="ADULT" count="1"/>
+                     <hc:GuestCount ageQualifyingCode="CHILD" count="0"/>
+                  </hc:GuestCounts>
+                  <hc:TimeSpan>
+                     <hc:StartDate>2017-01-16T00:00:00.0000000-05:00</hc:StartDate>
+                     <hc:EndDate>2017-01-17T00:00:00.0000000-05:00</hc:EndDate>
+                  </hc:TimeSpan>
+                  <hc:Guarantee guaranteeType="CC">
+                     <hc:GuaranteesAccepted>
+                        <hc:GuaranteeAccepted>
+                           <hc:GuaranteeCreditCard>
+                              <c:cardCode>MC</c:cardCode>
+                              <c:cardHolderName>Ribby Willard</c:cardHolderName>
+                              <c:cardNumber>5454545454545454</c:cardNumber>
+                              <c:expirationDate>2018-08-01</c:expirationDate>
+                           </hc:GuaranteeCreditCard>
+                        </hc:GuaranteeAccepted>
+                     </hc:GuaranteesAccepted>
+                  </hc:Guarantee>
+                  <hc:HotelReference chainCode="WC" hotelCode="SEPARA"/>
+                  <hc:ResGuestRPHs>
+                     <ResGuestRPH RPH="0"/>
+                  </hc:ResGuestRPHs>
+                  <hc:Comments>
+                     <hc:Comment guestViewable="false" commentOriginatorCode="CRO">
+                        <hc:Text>Comment 1</hc:Text>
+                     </hc:Comment>
+                     <hc:Comment guestViewable="true">
+                        <hc:Text>Comment 2</hc:Text>
+                     </hc:Comment>
+                  </hc:Comments>
+                  <hc:SpecialRequests>
+                     <hc:SpecialRequest requestCode="COT"/>
+                  </hc:SpecialRequests>
+               </hc:RoomStay>
+            </r:RoomStays>
+            <r:ResGuests>
+               <r:ResGuest>
+                  <r:Profiles>
+                     <n:Profile>
+                        <n:Customer gender="MALE">
+                           <n:PersonName>
+                              <c:firstName>Connect</c:firstName>
+                              <c:lastName>Test</c:lastName>
+                           </n:PersonName>
+                        </n:Customer>
+                        <n:Addresses>
+                           <n:NameAddress>
+                              <c:AddressLine>4231 Huntington Lakes Circle</c:AddressLine>
+                              <c:cityName>Naples</c:cityName>
+                              <c:stateProv>FL</c:stateProv>
+                              <c:countryCode>US</c:countryCode>
+                              <c:postalCode>34119</c:postalCode>
+                           </n:NameAddress>
+                        </n:Addresses>
+                     </n:Profile>
+                  </r:Profiles>
+                  <r:ArrivalTransport carrierCode="AA" id="421" locationCode="HEA" time="2004-01-29T14:30:00.000"/>
+                  <r:DepartureTransport carrierCode="DE" id="1421" locationCode="RSW" time="2005-05-31T16:30:00.000" type="Train"/>
+               </r:ResGuest>
+            </r:ResGuests>
+         </HotelReservation>
+      </CreateBookingRequest>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.micros.com/ows/5.1/Reservation.wsdl#CreateBooking"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="4114fe2b-d68f-4255-81bc-b0973d0cd787"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="04767094-1085-4d37-8505-56dbf293eed1"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="e42d9aaa-93aa-414a-b420-033d8178335b"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="77de8b38-ee0a-4d95-8578-dd2fdf0463fe"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="f19783da-ac64-44fb-b84b-26126cb496ec"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="4f04f3ce-c51b-4d55-993f-ccf1408a187d"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:call><con:call id="45253ddf-17db-4ee2-b244-ab6d143f3748" name="Create_Res_SEFIVE"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.76.240.141/OWS_WS_51/Reservation.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://webservices.micros.com/og/4.3/Common/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:r="http://webservices.micros.com/og/4.3/Reservation/" xmlns:hc="http://webservices.micros.com/og/4.3/HotelCommon/" xmlns:n="http://webservices.micros.com/og/4.3/Name/">
+   <soap:Header>
+      <OGHeader soap:mustUnderstand="1" transactionID="0000101" timeStamp="2004-03-22T15:25:01.4625000-05:00" primaryLangID="E" xmlns="http://webservices.micros.com/og/4.3/Core/">
+         <Origin entityID="WEST" systemType="WEB"/>
+         <Destination entityID="TI" systemType="ORS"/>
+         <Authentication>
+            <UserCredentials>
+               <UserName>CASINO</UserName>
+               <UserPassword>F00TBALL</UserPassword>
+            </UserCredentials>
+         </Authentication>
+      </OGHeader>
+   </soap:Header>
+   <soap:Body>
+      <CreateBookingRequest xmlns="http://webservices.micros.com/ows/5.1/Reservation.wsdl">
+         <HotelReservation>
+            <r:RoomStays>
+               <hc:RoomStay>
+                  <hc:RatePlans>
+                     <hc:RatePlan ratePlanCode="CONNECT"/>
+                  </hc:RatePlans>
+                  <hc:RoomTypes>
+                     <hc:RoomType roomTypeCode="STKCHAN" numberOfUnits="1"/>
+                  </hc:RoomTypes>
+                  <hc:RoomRates>
+                     <hc:RoomRate roomTypeCode="STKCHAN" ratePlanCode="CONNECT"/>
+                  </hc:RoomRates>
+                  <hc:GuestCounts>
+                     <hc:GuestCount ageQualifyingCode="ADULT" count="1"/>
+                     <hc:GuestCount ageQualifyingCode="CHILD" count="0"/>
+                  </hc:GuestCounts>
+                  <hc:TimeSpan>
+                     <hc:StartDate>2017-02-01T00:00:00.0000000-05:00</hc:StartDate>
+                     <hc:EndDate>2017-02-02T00:00:00.0000000-05:00</hc:EndDate>
+                  </hc:TimeSpan>
+                  <hc:Guarantee guaranteeType="CC">
+                     <hc:GuaranteesAccepted>
+                        <hc:GuaranteeAccepted>
+                           <hc:GuaranteeCreditCard>
+                              <c:cardCode>MC</c:cardCode>
+                              <c:cardHolderName>Ribby Willard</c:cardHolderName>
+                              <c:cardNumber>5454545454545454</c:cardNumber>
+                              <c:expirationDate>2018-08-01</c:expirationDate>
+                           </hc:GuaranteeCreditCard>
+                        </hc:GuaranteeAccepted>
+                     </hc:GuaranteesAccepted>
+                  </hc:Guarantee>
+                  <hc:HotelReference chainCode="WC" hotelCode="SEFIVE"/>
+                  <hc:ResGuestRPHs>
+                     <ResGuestRPH RPH="0"/>
+                  </hc:ResGuestRPHs>
+                  <hc:Comments>
+                     <hc:Comment guestViewable="false" commentOriginatorCode="CRO">
+                        <hc:Text>Comment 1</hc:Text>
+                     </hc:Comment>
+                     <hc:Comment guestViewable="true">
+                        <hc:Text>Comment 2</hc:Text>
+                     </hc:Comment>
+                  </hc:Comments>
+                  <hc:SpecialRequests>
+                     <hc:SpecialRequest requestCode="COT"/>
+                  </hc:SpecialRequests>
+               </hc:RoomStay>
+            </r:RoomStays>
+            <r:ResGuests>
+               <r:ResGuest>
+                  <r:Profiles>
+                     <n:Profile>
+                        <n:Customer gender="MALE">
+                           <n:PersonName>
+                              <c:firstName>Connect</c:firstName>
+                              <c:lastName>Test</c:lastName>
+                           </n:PersonName>
+                        </n:Customer>
+                        <n:Addresses>
+                           <n:NameAddress>
+                              <c:AddressLine>4231 Huntington Lakes Circle</c:AddressLine>
+                              <c:cityName>Naples</c:cityName>
+                              <c:stateProv>FL</c:stateProv>
+                              <c:countryCode>US</c:countryCode>
+                              <c:postalCode>34119</c:postalCode>
+                           </n:NameAddress>
+                        </n:Addresses>
+                     </n:Profile>
+                  </r:Profiles>
+                  <r:ArrivalTransport carrierCode="AA" id="421" locationCode="HEA" time="2004-01-29T14:30:00.000"/>
+                  <r:DepartureTransport carrierCode="DE" id="1421" locationCode="RSW" time="2005-05-31T16:30:00.000" type="Train"/>
+               </r:ResGuest>
+            </r:ResGuests>
+         </HotelReservation>
+      </CreateBookingRequest>
+   </soap:Body>
+</soap:Envelope>
+]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.micros.com/ows/5.1/Reservation.wsdl#CreateBooking"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="4114fe2b-d68f-4255-81bc-b0973d0cd787"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="04767094-1085-4d37-8505-56dbf293eed1"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="e42d9aaa-93aa-414a-b420-033d8178335b"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="77de8b38-ee0a-4d95-8578-dd2fdf0463fe"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="f19783da-ac64-44fb-b84b-26126cb496ec"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="4f04f3ce-c51b-4d55-993f-ccf1408a187d"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:call><con:call id="803d3742-50d6-436d-9f40-04c71bc8c928" name="Create_Res_CASINO"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.76.240.141/OWS_WS_51/Reservation.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://webservices.micros.com/og/4.3/Common/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:r="http://webservices.micros.com/og/4.3/Reservation/" xmlns:hc="http://webservices.micros.com/og/4.3/HotelCommon/" xmlns:n="http://webservices.micros.com/og/4.3/Name/">
+   <soap:Header>
+      <OGHeader soap:mustUnderstand="1" transactionID="0000101" timeStamp="2004-03-22T15:25:01.4625000-05:00" primaryLangID="E" xmlns="http://webservices.micros.com/og/4.3/Core/">
+         <Origin entityID="WEST" systemType="WEB"/>
+         <Destination entityID="WEST" systemType="ORS"/>
+      </OGHeader>
+   </soap:Header>
+   <soap:Body>
+      <CreateBookingRequest xmlns="http://webservices.micros.com/ows/5.1/Reservation.wsdl">
+         <HotelReservation>
+            <r:RoomStays>
+               <hc:RoomStay>
+                  <hc:RatePlans>
+                     <hc:RatePlan ratePlanCode="C3"/>
+                  </hc:RatePlans>
+                  <hc:RoomTypes>
+                     <hc:RoomType roomTypeCode="SUK" numberOfUnits="1"/>
+                  </hc:RoomTypes>
+                  <hc:RoomRates>
+                     <hc:RoomRate roomTypeCode="SUK" ratePlanCode="C3"/>
+                  </hc:RoomRates>
+                  <hc:GuestCounts>
+                     <hc:GuestCount ageQualifyingCode="ADULT" count="1"/>
+                     <hc:GuestCount ageQualifyingCode="CHILD" count="0"/>
+                  </hc:GuestCounts>
+                  <hc:TimeSpan>
+                     <hc:StartDate>2017-03-19T00:00:00.0000000-05:00</hc:StartDate>
+                     <hc:EndDate>2017-03-20T00:00:00.0000000-05:00</hc:EndDate>
+                  </hc:TimeSpan>
+                  <hc:Guarantee guaranteeType="CC">
+                     <hc:GuaranteesAccepted>
+                        <hc:GuaranteeAccepted>
+                           <hc:GuaranteeCreditCard>
+                              <c:cardCode>VA</c:cardCode>
+                              <c:cardHolderName>Ribby Willard</c:cardHolderName>
+                              <c:cardNumber>4444333322221111</c:cardNumber>
+                              <c:expirationDate>2018-08-01</c:expirationDate>
+                           </hc:GuaranteeCreditCard>
+                        </hc:GuaranteeAccepted>
+                     </hc:GuaranteesAccepted>
+                  </hc:Guarantee>
+                  <hc:HotelReference chainCode="CHA" hotelCode="CASINO"/>
+                  <hc:ResGuestRPHs>
+                     <ResGuestRPH RPH="0"/>
+                  </hc:ResGuestRPHs>
+                  <hc:Comments>
+                     <hc:Comment guestViewable="false" commentOriginatorCode="CRO">
+                        <hc:Text>Comment 1</hc:Text>
+                     </hc:Comment>
+                     <hc:Comment guestViewable="true">
+                        <hc:Text>Comment 2</hc:Text>
+                     </hc:Comment>
+                  </hc:Comments>
+                  <hc:SpecialRequests>
+                     <hc:SpecialRequest requestCode="COT"/>
+                  </hc:SpecialRequests>
+               </hc:RoomStay>
+            </r:RoomStays>
+            <r:ResGuests>
+               <r:ResGuest>
+                  <r:Profiles>
+                     <n:Profile>
+                        <n:Customer gender="MALE">
+                           <n:PersonName>
+                              <c:firstName>Connect</c:firstName>
+                              <c:lastName>Test</c:lastName>
+                           </n:PersonName>
+                        </n:Customer>
+                        <n:Addresses>
+                           <n:NameAddress>
+                              <c:AddressLine>4231 Huntington Lakes Circle</c:AddressLine>
+                              <c:cityName>Naples</c:cityName>
+                              <c:stateProv>FL</c:stateProv>
+                              <c:countryCode>US</c:countryCode>
+                              <c:postalCode>34119</c:postalCode>
+                           </n:NameAddress>
+                        </n:Addresses>
+                     </n:Profile>
+                  </r:Profiles>
+                  <r:ArrivalTransport carrierCode="AA" id="421" locationCode="HEA" time="2004-01-29T14:30:00.000"/>
+                  <r:DepartureTransport carrierCode="DE" id="1421" locationCode="RSW" time="2005-05-31T16:30:00.000" type="Train"/>
+               </r:ResGuest>
+            </r:ResGuests>
+         </HotelReservation>
+      </CreateBookingRequest>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.micros.com/ows/5.1/Reservation.wsdl#CreateBooking"/><con:wsrmConfig version="1.2"/><con:environmentSpec><con:entry environmentId="4114fe2b-d68f-4255-81bc-b0973d0cd787"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="04767094-1085-4d37-8505-56dbf293eed1"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="e42d9aaa-93aa-414a-b420-033d8178335b"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="77de8b38-ee0a-4d95-8578-dd2fdf0463fe"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="f19783da-ac64-44fb-b84b-26126cb496ec"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="4f04f3ce-c51b-4d55-993f-ccf1408a187d"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:call><con:environmentSpec><con:entry environmentId="4114fe2b-d68f-4255-81bc-b0973d0cd787"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="f19783da-ac64-44fb-b84b-26126cb496ec"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:operation>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="160d551d-f2b7-47e1-89ec-a1ddfe51becd" isOneWay="false" action="http://webservices.micros.com/ows/5.1/ResvAdvanced.wsdl#UpdatePayRouting" name="UpdatePayRouting" bindingOperationName="UpdatePayRouting" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="cbe06873-61c3-4eba-85af-a64efb2ce48afileName">UpdatePayRouting</con:setting><con:setting id="160d551d-f2b7-47e1-89ec-a1ddfe51becdfileName">UpdatePayRouting</con:setting></con:settings><con:call id="b89185cd-77fe-4976-88da-015c779404be" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.76.240.141/OWS_WS_51/ResAdvanced.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:core="http://webservices.micros.com/og/4.3/Core/" xmlns:res="http://webservices.micros.com/og/4.3/ResvAdvanced/" xmlns:com="http://webservices.micros.com/og/4.3/Common/">\r
+   <soapenv:Header>\r
+      <core:OGHeader transactionID="?" authToken="?" timeStamp="?" primaryLangID="E" channelValidation="true">\r
+         <core:Origin entityID="?" organizationID="?" systemType="?"/>\r
+         <core:Destination entityID="?" organizationID="?" systemType="?"/>\r
+         <!--Optional:-->\r
+         <core:Intermediaries>\r
+            <!--1 or more repetitions:-->\r
+            <core:EndPoint entityID="?" organizationID="?" systemType="?"/>\r
+         </core:Intermediaries>\r
+         <!--Optional:-->\r
+         <core:Authentication>\r
+            <core:UserCredentials>\r
+               <core:UserName>?</core:UserName>\r
+               <core:UserPassword>?</core:UserPassword>\r
+               <core:Domain>?</core:Domain>\r
+               <!--Optional:-->\r
+               <core:SecurityId>?</core:SecurityId>\r
+            </core:UserCredentials>\r
+            <!--Optional:-->\r
+            <core:Licence>\r
+               <!--Optional:-->\r
+               <core:Key>?</core:Key>\r
+            </core:Licence>\r
+         </core:Authentication>\r
+      </core:OGHeader>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <res:UpdatePayRoutingRequest>\r
+         <res:ReservationRequest>\r
+            <res:HotelReference chainCode="?" hotelCode="?">?</res:HotelReference>\r
+            <!--Optional:-->\r
+            <res:KeyTrack Key1Track="?" Key2Track="?" Key3Track="?" Key4Track="?"/>\r
+            <!--Optional:-->\r
+            <res:ReservationID>\r
+               <!--Zero or more repetitions:-->\r
+               <com:UniqueID type="?" source="?">?</com:UniqueID>\r
+            </res:ReservationID>\r
+            <!--Optional:-->\r
+            <res:CheckOutTime>?</res:CheckOutTime>\r
+         </res:ReservationRequest>\r
+         <res:PayRoutings RoutingInstruction="?" Owner="?" Window="?" Room="?">\r
+            <!--Optional:-->\r
+            <res:RoutingType>?</res:RoutingType>\r
+            <!--Optional:-->\r
+            <res:RoutingInstructionsId>?</res:RoutingInstructionsId>\r
+            <!--Optional:-->\r
+            <res:Resort>?</res:Resort>\r
+            <!--Optional:-->\r
+            <res:ResvNameID type="?" source="?">?</res:ResvNameID>\r
+            <!--Optional:-->\r
+            <res:RoutingCodes>\r
+               <!--1 or more repetitions:-->\r
+               <res:RoutingInstructionCode IsTransactionCode="?">\r
+                  <res:InstructionCode>?</res:InstructionCode>\r
+                  <!--Optional:-->\r
+                  <res:TCGroup>?</res:TCGroup>\r
+                  <!--Optional:-->\r
+                  <res:TCSubGroup>?</res:TCSubGroup>\r
+               </res:RoutingInstructionCode>\r
+            </res:RoutingCodes>\r
+            <!--Optional:-->\r
+            <res:BillToNameID type="?" source="?">?</res:BillToNameID>\r
+            <!--Optional:-->\r
+            <res:BeginDate>?</res:BeginDate>\r
+            <!--Optional:-->\r
+            <res:ToResvNameID type="?" source="?">?</res:ToResvNameID>\r
+            <!--Optional:-->\r
+            <res:BillingInstructionCode>?</res:BillingInstructionCode>\r
+            <!--Optional:-->\r
+            <res:EndDate>?</res:EndDate>\r
+            <!--Optional:-->\r
+            <res:AddTransaction>?</res:AddTransaction>\r
+            <!--Optional:-->\r
+            <res:AddressID type="?" source="?">?</res:AddressID>\r
+            <!--Optional:-->\r
+            <res:AuthorizerID type="?" source="?">?</res:AuthorizerID>\r
+            <!--Optional:-->\r
+            <res:RequestedBy>?</res:RequestedBy>\r
+            <!--Optional:-->\r
+            <res:AccountCode>?</res:AccountCode>\r
+            <!--Optional:-->\r
+            <res:CreditLimit>?</res:CreditLimit>\r
+            <!--Optional:-->\r
+            <res:LimitUsed>?</res:LimitUsed>\r
+            <!--Optional:-->\r
+            <res:Comments>?</res:Comments>\r
+            <!--Optional:-->\r
+            <res:Declined>?</res:Declined>\r
+            <!--Optional:-->\r
+            <res:DeclinedBy>?</res:DeclinedBy>\r
+            <!--Optional:-->\r
+            <res:CompVoucherNo>?</res:CompVoucherNo>\r
+            <!--Optional:-->\r
+            <res:CompCovers>?</res:CompCovers>\r
+            <!--Optional:-->\r
+            <res:CompTypeCode>?</res:CompTypeCode>\r
+            <!--Optional:-->\r
+            <res:RoutingPercent>?</res:RoutingPercent>\r
+            <!--Optional:-->\r
+            <res:RoutingLimitType>?</res:RoutingLimitType>\r
+            <!--Optional:-->\r
+            <res:MembershipID type="?" source="?">?</res:MembershipID>\r
+            <!--Optional:-->\r
+            <res:Day1>?</res:Day1>\r
+            <!--Optional:-->\r
+            <res:Day2>?</res:Day2>\r
+            <!--Optional:-->\r
+            <res:Day3>?</res:Day3>\r
+            <!--Optional:-->\r
+            <res:Day4>?</res:Day4>\r
+            <!--Optional:-->\r
+            <res:Day5>?</res:Day5>\r
+            <!--Optional:-->\r
+            <res:Day6>?</res:Day6>\r
+            <!--Optional:-->\r
+            <res:Day7>?</res:Day7>\r
+            <!--Optional:-->\r
+            <res:DayString>?</res:DayString>\r
+            <!--Optional:-->\r
+            <res:Daily>?</res:Daily>\r
+         </res:PayRoutings>\r
+      </res:UpdatePayRoutingRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservices.micros.com/ows/5.1/ResvAdvanced.wsdl#UpdatePayRouting"/><con:environmentSpec><con:entry environmentId="4114fe2b-d68f-4255-81bc-b0973d0cd787"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="04767094-1085-4d37-8505-56dbf293eed1"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="e42d9aaa-93aa-414a-b420-033d8178335b"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="77de8b38-ee0a-4d95-8578-dd2fdf0463fe"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="f19783da-ac64-44fb-b84b-26126cb496ec"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="4f04f3ce-c51b-4d55-993f-ccf1408a187d"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:call><con:environmentSpec><con:entry environmentId="4114fe2b-d68f-4255-81bc-b0973d0cd787"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="f19783da-ac64-44fb-b84b-26126cb496ec"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:operation>
