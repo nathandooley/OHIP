@@ -1,4 +1,3 @@
-CreateReservation.xml
 GetReservation.xml
 GetRes_InvalidConfirmation.xml
 GetRes_InvalidSubkey.xml

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="dbf26db1-3d49-4379-b4b9-b90b02b43d9d" failOnError="true" failTestCaseOnErrors="true" keepSession="true" maxResults="0" name="AuthSetup" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config"><con:description>TestCase generated for REST Resource [AuthSetup] located at [/ms_oauth/oauth2/endpoints/connect/tokens]</con:description><con:settings><con:setting id="e249cafa-e38a-4cd8-95a0-a80c1785cec5fileName">AuthSetup</con:setting><con:setting id="dbf26db1-3d49-4379-b4b9-b90b02b43d9dfileName">AuthSetup</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="FormAuthGetCookie" id="835ea80d-95dc-439d-a7c9-3cf80b4453fa"><con:settings/><con:config service="AuthCookie" resourcePath="/j_security_check" methodName="Cookie" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="FormAuthGetCookie" id="63d3b100-1024-478c-acc2-32294f809739" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">false</con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@use-get-method-on-302-redirect">false</con:setting></con:settings><con:endpoint>https://llg00epj.uk.oracle.com:7094</con:endpoint><con:request/><con:originalUri>http://den01fpj.us.oracle.com/ms_oauth/oauth2/endpoints/connect/tokens</con:originalUri><con:assertion type="XPath Match" id="aac5dd4e-56c5-40ab-8570-c19b4ac731c2" name="Match content of [title]"><con:configuration><path>//html[1]/head[1]/title[1]/text()</path><content>303 See Other</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username/><con:password/><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters>
+  <con:entry key="j_password" value="Pa55w0rd123!"/>
+  <con:entry key="j_username" value="APITEST"/>
+</con:parameters><con:parameterOrder><con:entry>j_username</con:entry><con:entry>j_password</con:entry></con:parameterOrder><con:environmentSpec><con:entry environmentId="3543ef17-a124-4491-982d-dd85ca8de498"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="a98926ee-a59f-4e64-84f9-bc586c0194c1"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="89ffcca8-0efd-4706-b839-b93c74bdbbd2"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="3018f682-4b82-435a-a50f-23fdba0421c2"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="eac78f98-76e3-4890-8491-84fe807d4e58"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0e829506-3b93-49df-8045-cca75389e848"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="a2ecc7fd-ad83-4d18-80cd-be95bc96dfd9"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="76b40d8c-ba65-4643-8673-ac1e8dc0651f"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="bed48c4c-90af-453c-8274-94a7f5f12819"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="dcefefd5-2efe-4589-bdf2-3d9067835e55"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0660b8a6-3b2e-4ef0-9ee2-8ee3ef1a2646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c9f22226-edc7-4c51-9bf0-fd9ea98af967"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0518cf54-ebb3-4189-9861-16c6ea5984fd"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetAccessToken" id="f08e07be-3b84-4646-b608-f53305fa7c85"><con:settings/><con:config service="AuthSetup" resourcePath="/ms_oauth/oauth2/endpoints/connect/tokens" methodName="Tokens" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetAccessToken" id="9bf46fb1-dab4-4530-941d-83bd364d080e" mediaType="" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Authorization" value="Basic ZDlmZjM3OTllYjlmNDU4MWJhMjg3YjFhZmMyOGIxZjE6V0t2YllXYjhKcHdESUM5dA=="/>
+  &lt;con:entry key="X-Requested-With" value="XMLHttpRequest"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://den01fpj.us.oracle.com:7777</con:endpoint><con:request/><con:originalUri>http://den01fpj.us.oracle.com/ms_oauth/oauth2/endpoints/connect/tokens</con:originalUri><con:assertion type="JsonPath Existence Match" id="21963f47-5c1f-411a-880f-875ab4e10cfa" name="Check for existence of [refresh_token]"><con:configuration><path>$['refresh_token']</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username>d9ff3799eb9f4581ba287b1afc28b1f1</con:username><con:password>WKvbYWb8JpwDIC9t</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="password" value="Pa55w0rd123!"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="username" value="OHIPTOKEN"/>
+</con:parameters><con:parameterOrder><con:entry>grant_type</con:entry><con:entry>username</con:entry><con:entry>password</con:entry></con:parameterOrder><con:environmentSpec><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="04767094-1085-4d37-8505-56dbf293eed1"><con:authProfile>Basic</con:authProfile><con:username>d9ff3799eb9f4581ba287b1afc28b1f1</con:username><con:password>WKvbYWb8JpwDIC9t</con:password><con:preemptive>true</con:preemptive></con:entry><con:entry environmentId="e42d9aaa-93aa-414a-b420-033d8178335b"><con:authProfile>Basic</con:authProfile><con:username>d9ff3799eb9f4581ba287b1afc28b1f1</con:username><con:password>WKvbYWb8JpwDIC9t</con:password><con:preemptive>true</con:preemptive></con:entry><con:entry environmentId="77de8b38-ee0a-4d95-8578-dd2fdf0463fe"><con:authProfile>Basic</con:authProfile><con:username>d9ff3799eb9f4581ba287b1afc28b1f1</con:username><con:password>WKvbYWb8JpwDIC9t</con:password><con:preemptive>true</con:preemptive></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="dcefefd5-2efe-4589-bdf2-3d9067835e55"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0660b8a6-3b2e-4ef0-9ee2-8ee3ef1a2646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c9f22226-edc7-4c51-9bf0-fd9ea98af967"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0518cf54-ebb3-4189-9861-16c6ea5984fd"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="CM Auth - Groovy Script" id="38dae9b4-6d19-4b63-a7c7-f6253907c5c6"><con:settings/><con:config><script>import net.sf.json.groovy.*
+import com.eviware.soapui.impl.wsdl.teststeps.*
+import com.eviware.soapui.support.types.StringToStringsMap
+
+import com.eviware.soapui.impl.wsdl.support.http.HttpClientSupport
+import org.apache.http.impl.cookie.BasicClientCookie
+
+final osbCallPath = "/clientManagementOSB/subscriptions/{SUBKEY}/routes/{InService}/{InOperation}"
+final soapSoapCallPath = "/clientManagementOSB/SubscriptionsService"
+
+def osbcall = testRunner.testCase.testSuite.project.getPropertyValue("osbCallPath")
+def soapcall = testRunner.testCase.testSuite.project.getPropertyValue("soapSoapCallPath")
+def endpointenv = testRunner.testCase.testSuite.project.getPropertyValue("endpoint")
+def subscriptionsService = testRunner.testCase.testSuite.project.getPropertyValue("subscriptionsService")
+
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context );
+def authTestStep = testRunner.runTestStepByName("GetAccessToken");
+def formAuthTestStep = testRunner.runTestStepByName("FormAuthGetCookie");
+def AuthSetup = testRunner.testCase.getTestStepByName("AuthSetup");
+
+def token = testRunner.testCase.testSteps["GetAccessToken"].testRequest.response.contentAsString
+def jsonSlurper = new JsonSlurper().parseText(token);
+auth_token = jsonSlurper.access_token;
+
+def cookie = testRunner.testCase.testSteps["FormAuthGetCookie"].testRequest.getResponse().getResponseHeaders()["Set-Cookie"];
+
+def project = testRunner.testCase.testSuite.project
+
+for( testSuite in project.getTestSuiteList() ) {
+	if (testSuite.name == "TestSetup") {		
+		continue;
+	}
+	
+	for( testCase in testSuite.getTestCaseList() ) {
+
+		if (testCase.name == "CreateClientProcess") {
+		
+		for( testStep in testCase.getTestStepList() ) {
+
+			def headers = new StringToStringsMap()
+			
+			if( testStep instanceof RestTestRequestStep ) {
+
+				
+				
+				if (testStep.getHttpRequest().getPath() == osbCallPath &amp;&amp; testStep.getHttpRequest().getMethod().toString() == "GET") {
+				    testStep.setPropertyValue("endpoint",osbcall)						
+					headers.put("Authorization", "Bearer " + auth_token);
+				}
+
+				else if (testStep.getHttpRequest().getPath() == soapSoapCallPath ) {
+					testStep.setPropertyValue("endpoint",soapcall)
+					log.info(testStep.getHttpRequest().getPath());
+				}
+
+				else {					
+					testStep.setPropertyValue("endpoint",endpointenv)	
+					headers.put("X-Requested-With","XMLHttpRequest")				
+					headers.put("Cookie", cookie);
+				}
+
+				testStep.getTestRequest().setRequestHeaders(headers)
+	    		}
+	    		
+    		}
+
+	    		
+	}
+}
+}</script></con:config></con:testStep><con:testStep type="groovy" name="Auth API Hotels - Groovy Script" id="54da0a3b-24f3-4c04-9349-1baf1b156df1"><con:settings/><con:config><script>import net.sf.json.groovy.*
+import com.eviware.soapui.impl.wsdl.teststeps.*
+import com.eviware.soapui.support.types.StringToStringsMap
+
+import com.eviware.soapui.impl.wsdl.support.http.HttpClientSupport
+import org.apache.http.impl.cookie.BasicClientCookie
+
+def adapterendpoint = testRunner.testCase.testSuite.project.getPropertyValue("adapterCallPath")
+def suiteToIgnore1 = 'AuthSetup'
+def suiteToIgnore2 = 'CreateTestData'
+
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context );
+def authTestStep = testRunner.runTestStepByName("GetAccessToken");
+def formAuthTestStep = testRunner.runTestStepByName("FormAuthGetCookie");
+def AuthSetup = testRunner.testCase.getTestStepByName("AuthSetup");
+
+def token = testRunner.testCase.testSteps["GetAccessToken"].testRequest.response.contentAsString
+def jsonSlurper = new JsonSlurper().parseText(token);
+auth_token = jsonSlurper.access_token;
+
+def project = testRunner.testCase.testSuite.project
+
+project.testSuiteList.each { suite ->
+if (suiteToIgnore1 != suite.name) 
+if (suiteToIgnore2 != suite.name){
+        suite.testCaseList.each { kase ->
+            kase.testStepList.each { step ->
+                if( testStep instanceof RestTestRequestStep ) {
+                    //Get the headers of the current teststep
+                    def headers = step.httpRequest.requestHeaders
+                    //Append the new header to the existing list
+                    headers.put("Authorization", "Bearer " + auth_token)
+                    //Set the updated header list 
+                    step.httpRequest.requestHeaders = headers
+                }
+            }
+        }
+    }
+}</script></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>8c1cb102-f4dd-4992-829b-90cfb909474e</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>38dae9b4-6d19-4b63-a7c7-f6253907c5c6</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:environmentSpec><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="dcefefd5-2efe-4589-bdf2-3d9067835e55"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0660b8a6-3b2e-4ef0-9ee2-8ee3ef1a2646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c9f22226-edc7-4c51-9bf0-fd9ea98af967"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0518cf54-ebb3-4189-9861-16c6ea5984fd"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:testCase>

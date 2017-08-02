@@ -1,8 +1,8 @@
-Auth_Setup
+AuthSetup
 AuthCookie
-Hotels-API
+AdapterAPI
 Clients
 ClientSubscriptions
-Products
-ProductRoutes
+BaseServices
+BaseServiceRoutes
 SubscriptionProducts

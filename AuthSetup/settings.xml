@@ -1,2 +1,1858 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testSuite id="4a23b057-c49d-4f54-8553-1b9e5017b71e" name="AuthSetup" xmlns:con="http://eviware.com/soapui/config"><con:description>TestSuite generated for REST Service [http://den01fpj.us.oracle.com:7777]</con:description><con:settings><con:setting id="1a934b84-da5d-47f3-88ab-03db9167acc0fileName">AuthSetup</con:setting><con:setting id="4a23b057-c49d-4f54-8553-1b9e5017b71efileName">AuthSetup</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType><con:properties/><con:reportParameters/><con:environmentSpec><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="f19783da-ac64-44fb-b84b-26126cb496ec"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:testSuite>
+<con:interface xsi:type="con:RestService" id="836a2de4-b448-4716-a810-6ffca36e6cc5" wadlVersion="http://wadl.dev.java.net/2009/02" name="AuthSetup" type="rest" definitionUrl="C:\Users\ndooley\Desktop\token.wadl" basePath="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="5d83792b-c4cb-46ce-8304-23063453718cfileName">Auth_Setup</con:setting><con:setting id="836a2de4-b448-4716-a810-6ffca36e6cc5fileName">AuthSetup</con:setting></con:settings><con:definitionCache type="TEXT" rootPart="file:/C:/Users/ndooley/Desktop/token.wadl"><con:part><con:url>file:/C:/Users/ndooley/Desktop/token.wadl</con:url><con:content><![CDATA[<application xmlns="http://wadl.dev.java.net/2009/02">
+  <doc xml:lang="en" title="REST API for Oracle Hospitality Integration Cloud Service">REST API for Oracle Hospitality Integration Cloud Service</doc>
+  <resources base="">
+    <resource path="v1/Bills/{ConfirmationNumber}" id="/v1/Bills/{ConfirmationNumber}">
+      <doc xml:lang="en" title="/v1/Bills/{ConfirmationNumber}"/>
+      <method name="GET" id="getBills">
+        <doc xml:lang="en" title="getBills">Get a bill for a reservation
+Get Bills</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ConfirmationNumber" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ConfirmationNumber Parameter">ConfirmationNumber of the reservation</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles" id="/v1/Profiles">
+      <doc xml:lang="en" title="/v1/Profiles"/>
+      <method name="POST" id="postProfile">
+        <doc xml:lang="en" title="postProfile">Creates a new profile and its name identifier
+Profiles</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}" id="/v1/Profiles/{ProfileId}">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}"/>
+      <method name="GET" id="getProfile">
+        <doc xml:lang="en" title="getProfile">Retrieves the name record from a profile
+Profile</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="PUT" id="putProfile">
+        <doc xml:lang="en" title="putProfile">Modifies the name information in a profile, given at least the name identifier and name record
+Profile</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="409">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/Addresses" id="/v1/Profiles/{ProfileId}/Addresses">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/Addresses"/>
+      <method name="GET" id="getAddresses">
+        <doc xml:lang="en" title="getAddresses">Get the addresses for this profile
+Addresses</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="POST" id="postAddress">
+        <doc xml:lang="en" title="postAddress">Adds an address record to a profile, given the name identifier and address information to insert.
+Addresses</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/Addresses/{AddressId}" id="/v1/Profiles/{ProfileId}/Addresses/{AddressId}">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/Addresses/{AddressId}"/>
+      <method name="GET" id="getAddress">
+        <doc xml:lang="en" title="getAddress">Get an addresses stored on a profile
+Addresses</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="AddressId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="AddressId Parameter">Internal unique identifier for an address</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="PUT" id="putAddress">
+        <doc xml:lang="en" title="putAddress">Modifies an address record in a profile, given the address information. 
+Addresses</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="AddressId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="AddressId Parameter">Internal unique identifier for an address</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="409">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="DELETE" id="deleteAddress">
+        <doc xml:lang="en" title="deleteAddress">Deletes an address record from a profile, given the name identifier and address information to insert.
+Addresses</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="AddressId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="AddressId Parameter">Unique internal identifier of an address</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/Comments" id="/v1/Profiles/{ProfileId}/Comments">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/Comments"/>
+      <method name="GET" id="getComments">
+        <doc xml:lang="en" title="getComments">Get a list of the comments for this profile
+Comments</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="POST" id="postComment">
+        <doc xml:lang="en" title="postComment">Adds a comment to a profile, given the name identifier and comment information to insert. 
+Comments</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/Comments/{CommentId}" id="/v1/Profiles/{ProfileId}/Comments/{CommentId}">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/Comments/{CommentId}"/>
+      <method name="GET" id="getComment">
+        <doc xml:lang="en" title="getComment">Retrieves a comments from a profile, given the name identifier. 
+Comments</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="CommentId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="CommentId Parameter">Unique internal identifier of a comment</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="PUT" id="putComment">
+        <doc xml:lang="en" title="putComment">Amends a comment on a profile, given the name identifier and comment information to insert. 
+Comments</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="CommentId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="CommentId Parameter">Unique internal identifier of a comment</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="DELETE" id="deleteComment">
+        <doc xml:lang="en" title="deleteComment">Deletes a commment from a profile, given the name identifier and comment information to insert. 
+Comments</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="CommentId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="CommentId Parameter">Unique internal identifier of a comment</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/Emails" id="/v1/Profiles/{ProfileId}/Emails">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/Emails"/>
+      <method name="GET" id="getEmails">
+        <doc xml:lang="en" title="getEmails">Get a list of the email addresses for this profile
+Emails</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="POST" id="postEmail">
+        <doc xml:lang="en" title="postEmail">Adds an e-mail address record to a profile, given the name identifier and e-mail address to insert. 
+Emails</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/Emails/{EmailId}" id="/v1/Profiles/{ProfileId}/Emails/{EmailId}">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/Emails/{EmailId}"/>
+      <method name="GET" id="getEmail">
+        <doc xml:lang="en" title="getEmail">Retrieves an e-mail address from a profile, given the name identifier. 
+Emails</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="EmailId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="EmailId Parameter">Unique internal identifier of a email address</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="PUT" id="putEmail">
+        <doc xml:lang="en" title="putEmail">Modifies an e-mail address record in a profile, given the-e-mail address information. 
+Emails</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="EmailId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="EmailId Parameter">Unique internal identifier of a email address</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="DELETE" id="deleteEmail">
+        <doc xml:lang="en" title="deleteEmail">Deletes an e-mail address record from a profile, given the-e-mail address information. 
+Emails</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="EmailId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="EmailId Parameter">Unique internal identifier of a email address</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/Identifications" id="/v1/Profiles/{ProfileId}/Identifications">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/Identifications"/>
+      <method name="GET" id="getIdentifications">
+        <doc xml:lang="en" title="getIdentifications">Retrieves the list of documents from a profile, given the name identifier. 
+Identifications</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="POST" id="postIdentification">
+        <doc xml:lang="en" title="postIdentification">Adds a document to a profile, given the name identifier and document information to insert.
+Identifications</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/Identifications/{IdentificationId}" id="/v1/Profiles/{ProfileId}/Identifications/{IdentificationId}">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/Identifications/{IdentificationId}"/>
+      <method name="GET" id="getIdentification">
+        <doc xml:lang="en" title="getIdentification">Retrieves a document from a profile, given the name identifier. 
+Identifications</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="IdentificationId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="IdentificationId Parameter">Unique internal identifier of a document</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="DELETE" id="deleteIdentification">
+        <doc xml:lang="en" title="deleteIdentification">Deletes a specific document from a profile, given the name and document identifiers. 
+Identifications</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="IdentificationId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="IdentificationId Parameter">Unique internal identifier of a document</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/Memberships" id="/v1/Profiles/{ProfileId}/Memberships">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/Memberships"/>
+      <method name="GET" id="getMemberships">
+        <doc xml:lang="en" title="getMemberships">Get the addresses for this profile
+Memberships</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="POST" id="postMembership">
+        <doc xml:lang="en" title="postMembership">Adds a membership record to a profile, given the name identifier and membership information to insert. 
+Memberships</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/Memberships/{MembershipId}" id="/v1/Profiles/{ProfileId}/Memberships/{MembershipId}">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/Memberships/{MembershipId}"/>
+      <method name="GET" id="getMembership">
+        <doc xml:lang="en" title="getMembership">Retrieves a membership records from a profile, given the name identifier. 
+Membership</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="MembershipId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="MembershipId Parameter">Unique internal identifier of a membership</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="PUT" id="putMembership">
+        <doc xml:lang="en" title="putMembership">Modifies a membership record in a profile, given the membership information.
+Membership</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="MembershipId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="MembershipId Parameter">Unique internal identifier of a membership</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="DELETE" id="deleteMembership">
+        <doc xml:lang="en" title="deleteMembership">Deletes a specific membership number from a profile, given the guest card identifier. 
+Membership</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="MembershipId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="MembershipId Parameter">Unique internal identifier of a membership</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/Phones" id="/v1/Profiles/{ProfileId}/Phones">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/Phones"/>
+      <method name="GET" id="getPhones">
+        <doc xml:lang="en" title="getPhones">Retrieves the list of phone numbers for a profile, given the name identifier. 
+Phones</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="POST" id="postPhone">
+        <doc xml:lang="en" title="postPhone">Adds a phone record to a profile, given the name identifier and phone information to insert. 
+Phones</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/Phones/{PhoneId}" id="/v1/Profiles/{ProfileId}/Phones/{PhoneId}">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/Phones/{PhoneId}"/>
+      <method name="GET" id="getPhone">
+        <doc xml:lang="en" title="getPhone">Retrieves a phone record from a profile, given the name identifier. 
+Phones</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="PhoneId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PhoneId Parameter">Unique internal identifier of a comment</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="PUT" id="putPhone">
+        <doc xml:lang="en" title="putPhone">Modifies a phone record in a profile, given the phone information.
+Phones</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="PhoneId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PhoneId Parameter">Unique internal identifier of a phone record</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="DELETE" id="deletePhone">
+        <doc xml:lang="en" title="deletePhone">Deletes a phone record in a profile, given the phone information.
+Phones</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="PhoneId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PhoneId Parameter">Unique internal identifier of a phone record</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/Preferences" id="/v1/Profiles/{ProfileId}/Preferences">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/Preferences"/>
+      <method name="GET" id="getPreferences">
+        <doc xml:lang="en" title="getPreferences">Get the preferences for this profile
+Preferences</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="POST" id="postPreference">
+        <doc xml:lang="en" title="postPreference">Adds a preference to a profile, given the name identifier and preference description.
+Preferences</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/Preferences/{PreferenceType}/{PreferenceValue}" id="/v1/Profiles/{ProfileId}/Preferences/{PreferenceType}/{PreferenceValue}">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/Preferences/{PreferenceType}/{PreferenceValue}"/>
+      <method name="DELETE" id="deletePreference">
+        <doc xml:lang="en" title="deletePreference">Deletes a specific preference from a profile, given the name identifier. 
+Remove a preference</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="PreferenceType" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PreferenceType Parameter">The preference type code (validated).</doc>
+          </param>
+          <param name="PreferenceValue" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PreferenceValue Parameter">The actual coded value that represents this preference (validated).</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/PrivacyOptions" id="/v1/Profiles/{ProfileId}/PrivacyOptions">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/PrivacyOptions"/>
+      <method name="GET" id="getPrivacyOptions">
+        <doc xml:lang="en" title="getPrivacyOptions">Retrieves a list of the privacy options set for a profile, given the name identifier.
+Privacy Options</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="POST" id="postPrivacyOption">
+        <doc xml:lang="en" title="postPrivacyOption">Adds a privacy option setting for a profile, given the name identifier.
+Privacy Options</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/PrivacyOptions/{PrivacyOptionId}" id="/v1/Profiles/{ProfileId}/PrivacyOptions/{PrivacyOptionId}">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/PrivacyOptions/{PrivacyOptionId}"/>
+      <method name="GET" id="getPrivacyOption">
+        <doc xml:lang="en" title="getPrivacyOption">Retrieves a privacy option setting for a profile, given the name identifier.
+Privacy Options</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="PrivacyOptionId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PrivacyOptionId Parameter">The possible values are Promotions, MarketResearch, ThirdParties, LoyaltyProgram, Privacy, Email, Mail, Phone, and SMS.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="PUT" id="putPrivacyOption">
+        <doc xml:lang="en" title="putPrivacyOption">Modifies the list of privacy option settings for a profile, given the name identifier and a list of privacy option setting records. 
+Privacy Options</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="PrivacyOptionId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PrivacyOptionId Parameter">Internal identifier for the privacy option.</doc>
+          </param>
+          <param name="OptionValue" type="xs:string" required="true" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="OptionValue Parameter">Values are either Yes or No</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="DELETE" id="deletePrivacyOption">
+        <doc xml:lang="en" title="deletePrivacyOption">Deletes a privacy option from a profile, given the name identifier.
+Privacy Options</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+          <param name="PrivacyOptionId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PrivacyOptionId Parameter">The possible values are Promotions, MarketResearch, ThirdParties, LoyaltyProgram, Privacy, Email, Mail, Phone, and SMS.</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Profiles/{ProfileId}/RoomReservations" id="/v1/Profiles/{ProfileId}/RoomReservations">
+      <doc xml:lang="en" title="/v1/Profiles/{ProfileId}/RoomReservations"/>
+      <method name="GET" id="getProfileReservations">
+        <doc xml:lang="en" title="getProfileReservations">Get a list of reservations for this profile
+Get a list of reservations for this profile</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ProfileId" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ProfileId Parameter">Internal unique identifier for a profile</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Properties/{PropertyCode}/AddressType" id="/v1/Properties/{PropertyCode}/AddressType">
+      <doc xml:lang="en" title="/v1/Properties/{PropertyCode}/AddressType"/>
+      <method name="GET" id="getAddressTypes">
+        <doc xml:lang="en" title="getAddressTypes">Retrive list of address types
+List Of Values</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="PropertyCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PropertyCode Parameter">PropertyCode of the property for which to obtain the list of address types</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Properties/{PropertyCode}/CheckedIn" id="/v1/Properties/{PropertyCode}/CheckedIn">
+      <doc xml:lang="en" title="/v1/Properties/{PropertyCode}/CheckedIn"/>
+      <method name="POST" id="reservationCheckIn">
+        <doc xml:lang="en" title="reservationCheckIn">Check a reservation into the property.
+Check In</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="PropertyCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PropertyCode Parameter">PropertyCode of the property into which the reservation is being checked</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Properties/{PropertyCode}/CheckedOut" id="/v1/Properties/{PropertyCode}/CheckedOut">
+      <doc xml:lang="en" title="/v1/Properties/{PropertyCode}/CheckedOut"/>
+      <method name="POST" id="reservationCheckOut">
+        <doc xml:lang="en" title="reservationCheckOut">Check a reservation out of the property.
+Check Out</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="PropertyCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PropertyCode Parameter">PropertyCode of the property out of which the reservation is being checked</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Properties/{PropertyCode}/CommentTypes" id="/v1/Properties/{PropertyCode}/CommentTypes">
+      <doc xml:lang="en" title="/v1/Properties/{PropertyCode}/CommentTypes"/>
+      <method name="GET" id="getCommentTypes">
+        <doc xml:lang="en" title="getCommentTypes">Retrive list of comment types
+List Of Values</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="PropertyCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PropertyCode Parameter">PropertyCode of the property for which to obtain the list of comment types</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Properties/{PropertyCode}/Countries" id="/v1/Properties/{PropertyCode}/Countries">
+      <doc xml:lang="en" title="/v1/Properties/{PropertyCode}/Countries"/>
+      <method name="GET" id="getCountries">
+        <doc xml:lang="en" title="getCountries">Retrive list of country codes
+List Of Values</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="PropertyCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PropertyCode Parameter">PropertyCode of the property for which to obtain the list of countries</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Properties/{PropertyCode}/Countries/{CountryCode}/States" id="/v1/Properties/{PropertyCode}/Countries/{CountryCode}/States">
+      <doc xml:lang="en" title="/v1/Properties/{PropertyCode}/Countries/{CountryCode}/States"/>
+      <method name="GET" id="getStatesByCountry">
+        <doc xml:lang="en" title="getStatesByCountry">Retrive list of states by country
+List Of Values</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="PropertyCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PropertyCode Parameter">PropertyCode of the property for which to obtain the list of states</doc>
+          </param>
+          <param name="CountryCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Properties/{PropertyCode}/Languages" id="/v1/Properties/{PropertyCode}/Languages">
+      <doc xml:lang="en" title="/v1/Properties/{PropertyCode}/Languages"/>
+      <method name="GET" id="getLanguages">
+        <doc xml:lang="en" title="getLanguages">Retrive list of language types
+List Of Values</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="PropertyCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PropertyCode Parameter">PropertyCode of the property for which to obtain the list of languages</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Properties/{PropertyCode}/MembershipLevels" id="/v1/Properties/{PropertyCode}/MembershipLevels">
+      <doc xml:lang="en" title="/v1/Properties/{PropertyCode}/MembershipLevels"/>
+      <method name="GET" id="getMembershipLevels">
+        <doc xml:lang="en" title="getMembershipLevels">Retrive list of membership levels
+List Of Values</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="PropertyCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PropertyCode Parameter">PropertyCode of the property for which to obtain the list of membership levels</doc>
+          </param>
+          <param name="MembershipType" type="xs:string" required="true" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Properties/{PropertyCode}/MembershipTypes" id="/v1/Properties/{PropertyCode}/MembershipTypes">
+      <doc xml:lang="en" title="/v1/Properties/{PropertyCode}/MembershipTypes"/>
+      <method name="GET" id="getMembershipTypes">
+        <doc xml:lang="en" title="getMembershipTypes">Retrive list of membership types
+List Of Values</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="PropertyCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PropertyCode Parameter">PropertyCode of the property for which to obtain the list of membership types</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Properties/{PropertyCode}/Nationalities" id="/v1/Properties/{PropertyCode}/Nationalities">
+      <doc xml:lang="en" title="/v1/Properties/{PropertyCode}/Nationalities"/>
+      <method name="GET" id="getNationalities">
+        <doc xml:lang="en" title="getNationalities">Retrive list of nationalities
+List Of Values</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="PropertyCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PropertyCode Parameter">PropertyCode of the property for which to obtain the list of nationalities</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Properties/{PropertyCode}/PhoneRoles" id="/v1/Properties/{PropertyCode}/PhoneRoles">
+      <doc xml:lang="en" title="/v1/Properties/{PropertyCode}/PhoneRoles"/>
+      <method name="GET" id="getPhoneRoles">
+        <doc xml:lang="en" title="getPhoneRoles">Retrive list of phone roles
+List Of Values</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="PropertyCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PropertyCode Parameter">PropertyCode of the property for which to obtain the list of phone roles</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Properties/{PropertyCode}/PhoneTypes" id="/v1/Properties/{PropertyCode}/PhoneTypes">
+      <doc xml:lang="en" title="/v1/Properties/{PropertyCode}/PhoneTypes"/>
+      <method name="GET" id="getPhoneTypes">
+        <doc xml:lang="en" title="getPhoneTypes">Retrive list of phone types
+List Of Values</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="PropertyCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PropertyCode Parameter">PropertyCode of the property for which to obtain the list of phone types</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Properties/{PropertyCode}/PreCheckedIn" id="/v1/Properties/{PropertyCode}/PreCheckedIn">
+      <doc xml:lang="en" title="/v1/Properties/{PropertyCode}/PreCheckedIn"/>
+      <method name="POST" id="reservationPreCheckIn">
+        <doc xml:lang="en" title="reservationPreCheckIn">Pre-arrive a reservation.
+Pre-Check In</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="PropertyCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PropertyCode Parameter">PropertyCode of the property into which the reservation is being checked</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Properties/{PropertyCode}/PreferenceTypes" id="/v1/Properties/{PropertyCode}/PreferenceTypes">
+      <doc xml:lang="en" title="/v1/Properties/{PropertyCode}/PreferenceTypes"/>
+      <method name="GET" id="getPreferenceTypes">
+        <doc xml:lang="en" title="getPreferenceTypes">Retrive list of preference types
+List Of Values</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="PropertyCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PropertyCode Parameter">PropertyCode of the property for which to obtain the lit of preference types</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Properties/{PropertyCode}/PreferenceValues" id="/v1/Properties/{PropertyCode}/PreferenceValues">
+      <doc xml:lang="en" title="/v1/Properties/{PropertyCode}/PreferenceValues"/>
+      <method name="GET" id="getPreferenceValues">
+        <doc xml:lang="en" title="getPreferenceValues">Retrive list of preference values
+List Of Values</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="PreferenceType" type="xs:string" required="true" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="PropertyCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PropertyCode Parameter">PropertyCode of the property for which to obtain the list of preference values</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/Properties/{PropertyCode}/Titles" id="/v1/Properties/{PropertyCode}/Titles">
+      <doc xml:lang="en" title="/v1/Properties/{PropertyCode}/Titles"/>
+      <method name="GET" id="getTitles">
+        <doc xml:lang="en" title="getTitles">Retrive list of titles
+List Of Values</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="PropertyCode" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="PropertyCode Parameter">PropertyCode of the property for which to obtain the list of titles</doc>
+          </param>
+          <param name="LanguageCode" type="xs:string" required="true" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=collection"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="v1/RoomReservations/{ConfirmationNumber}" id="/v1/RoomReservations/{ConfirmationNumber}">
+      <doc xml:lang="en" title="/v1/RoomReservations/{ConfirmationNumber}"/>
+      <method name="GET" id="getReservation">
+        <doc xml:lang="en" title="getReservation">Retrieve a given reservation
+Get a reservation</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ConfirmationNumber" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ConfirmationNumber Parameter">ConfirmationNumber of the reservation</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+      <method name="PATCH" id="patchArrivalTime">
+        <doc xml:lang="en" title="patchArrivalTime">Update a reservation with the time you expect to arrive at the property
+Update Arrival Time</doc>
+        <request>
+          <param name="x-subscription-key" type="xs:string" required="true" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="x-subscription-key Parameter">Client or Partner's subscription key</doc>
+          </param>
+          <param name="cnct_transaction_id" type="xs:string" required="false" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cnct_transaction_id Parameter">INTERNAL USE: Unique ID of this transaction as it passes through the system</doc>
+          </param>
+          <param name="ConfirmationNumber" type="xs:string" required="true" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="ConfirmationNumber Parameter">ConfirmationNumber of the reservation</doc>
+          </param>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+        <response status="405">
+          <representation mediaType="application/vnd.oracle.resource+json;type=singular"/>
+        </response>
+      </method>
+    </resource>
+  </resources>
+</application>]]></con:content><con:type>http://wadl.dev.java.net/2009/02</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://den01fpj.us.oracle.com:7777</con:endpoint></con:endpoints><con:environmentSpec><con:entry environmentId="38a55101-7fbe-4ffe-acf4-fa64ca7f6255"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="5bd0c19b-9462-47bc-989c-c72d31279652"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="f19783da-ac64-44fb-b84b-26126cb496ec"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c60c6bd1-0986-4b3e-a976-51a6a2e46a83"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0b90dea3-cdfa-46a4-a9fb-877b10c00646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="86d398f0-0210-40c3-b836-2c616491912c"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cdfa0b6c-0bc3-406e-911a-a689bdfe6ddc"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="61b68220-6309-401e-a8e9-52266d83850b"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="dcefefd5-2efe-4589-bdf2-3d9067835e55"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0660b8a6-3b2e-4ef0-9ee2-8ee3ef1a2646"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c9f22226-edc7-4c51-9bf0-fd9ea98af967"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="0518cf54-ebb3-4189-9861-16c6ea5984fd"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:interface>
